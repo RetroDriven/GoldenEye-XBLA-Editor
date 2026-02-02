@@ -155,7 +155,7 @@
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(399, 23);
             guna2HtmlLabel1.TabIndex = 0;
-            guna2HtmlLabel1.Text = "GoldenEye XBLA Editor v1.0";
+            guna2HtmlLabel1.Text = "GoldenEye XBLA Editor BETA v1";
             // 
             // guna2ResizeForm1
             // 

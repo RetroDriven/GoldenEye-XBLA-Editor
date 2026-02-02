@@ -99,7 +99,7 @@
             // 
             label1.Anchor = AnchorStyles.Left;
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
             label1.Padding = new Padding(0, 19, 0, 0);
@@ -143,7 +143,7 @@
             Map.DropDownStyle = ComboBoxStyle.DropDownList;
             Map.FillColor = Color.FromArgb(39, 44, 66);
             Map.FocusedColor = Color.Empty;
-            Map.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            Map.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             Map.ForeColor = SystemColors.ControlLightLight;
             Map.ItemHeight = 30;
             Map.Items.AddRange(new object[] { "Archives", "Aztec", "Bunker 1", "Bunker 2", "Caverns", "Control", "Cradle", "Cuba(End Credits)", "Dam", "Depot", "Egyptian", "Facility", "Frigate", "Jungle", "Runway", "Silo", "Statue", "Streets", "Surface 1", "Surface 2", "Train" });
@@ -159,7 +159,7 @@
             // 
             label2.Anchor = AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label2.Location = new Point(3, 11);
             label2.Name = "label2";
             label2.Size = new Size(129, 20);
@@ -201,7 +201,7 @@
             BrfFile.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             BrfFile.FillColor = Color.FromArgb(39, 44, 66);
             BrfFile.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            BrfFile.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            BrfFile.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             BrfFile.ForeColor = SystemColors.ControlLightLight;
             BrfFile.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             BrfFile.Location = new Point(98, 57);
@@ -230,7 +230,7 @@
             XexFile.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             XexFile.FillColor = Color.FromArgb(39, 44, 66);
             XexFile.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            XexFile.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            XexFile.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             XexFile.ForeColor = SystemColors.ControlLightLight;
             XexFile.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             XexFile.Location = new Point(98, 7);
@@ -255,7 +255,7 @@
             btnXex.DisabledState.CustomBorderColor = Color.DarkGray;
             btnXex.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnXex.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnXex.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnXex.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             btnXex.ForeColor = Color.White;
             btnXex.Location = new Point(3, 3);
             btnXex.Name = "btnXex";
@@ -276,7 +276,7 @@
             btnBrf.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBrf.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBrf.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBrf.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBrf.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             btnBrf.ForeColor = Color.White;
             btnBrf.Location = new Point(3, 53);
             btnBrf.Name = "btnBrf";
@@ -297,7 +297,7 @@
             btnImport.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnImport.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnImport.Enabled = false;
-            btnImport.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnImport.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             btnImport.ForeColor = Color.White;
             btnImport.Location = new Point(169, 103);
             btnImport.Margin = new Padding(75, 3, 3, 3);
@@ -337,7 +337,7 @@
             // 
             label6.Anchor = AnchorStyles.Left;
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             label6.Location = new Point(3, 19);
             label6.Name = "label6";
             label6.Size = new Size(108, 25);
@@ -362,7 +362,7 @@
             guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox4.FillColor = Color.FromArgb(39, 44, 66);
             guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2TextBox4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             guna2TextBox4.ForeColor = SystemColors.ControlLightLight;
             guna2TextBox4.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox4.Location = new Point(4, 64);

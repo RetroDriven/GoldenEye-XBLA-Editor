@@ -45,17 +45,21 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MP_Setup_Converter));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MP_Setup_Converter));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Panel_Left = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
             guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             tableLayoutPanel1 = new TableLayoutPanel();
+            label6 = new Label();
             label4 = new Label();
             label3 = new Label();
             MP_Slot = new Guna.UI2.WinForms.Guna2ComboBox();
             MP_Map = new Guna.UI2.WinForms.Guna2ComboBox();
+            Backup = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             txtUnique = new Guna.UI2.WinForms.Guna2TextBox();
             label2 = new Label();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -86,7 +90,7 @@
             Panel_Left.Dock = DockStyle.Left;
             Panel_Left.Location = new Point(0, 0);
             Panel_Left.Name = "Panel_Left";
-            Panel_Left.Size = new Size(364, 429);
+            Panel_Left.Size = new Size(364, 529);
             Panel_Left.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -100,7 +104,7 @@
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(361, 349);
+            flowLayoutPanel1.Size = new Size(361, 390);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // label1
@@ -128,20 +132,34 @@
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.Controls.Add(label6, 0, 3);
             tableLayoutPanel1.Controls.Add(label4, 0, 2);
             tableLayoutPanel1.Controls.Add(label3, 0, 1);
             tableLayoutPanel1.Controls.Add(MP_Slot, 1, 1);
             tableLayoutPanel1.Controls.Add(MP_Map, 1, 0);
+            tableLayoutPanel1.Controls.Add(Backup, 1, 3);
             tableLayoutPanel1.Controls.Add(txtUnique, 1, 2);
             tableLayoutPanel1.Controls.Add(label2, 0, 0);
             tableLayoutPanel1.Location = new Point(3, 63);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowCount = 4;
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(355, 127);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
+            tableLayoutPanel1.Size = new Size(355, 161);
             tableLayoutPanel1.TabIndex = 2;
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Right;
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(37, 134);
+            label6.Name = "label6";
+            label6.Size = new Size(90, 20);
+            label6.TabIndex = 10;
+            label6.Text = "Backup Xex";
             // 
             // label4
             // 
@@ -213,6 +231,31 @@
             MP_Map.TabIndex = 4;
             MP_Map.SelectedIndexChanged += MP_Map_SelectedIndexChanged;
             // 
+            // Backup
+            // 
+            Backup.Anchor = AnchorStyles.Left;
+            Backup.AutoRoundedCorners = true;
+            Backup.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            Backup.CheckedState.BorderRadius = 13;
+            Backup.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            Backup.CheckedState.InnerBorderColor = Color.White;
+            Backup.CheckedState.InnerBorderRadius = 9;
+            Backup.CheckedState.InnerColor = Color.White;
+            Backup.Cursor = Cursors.Hand;
+            Backup.CustomizableEdges = customizableEdges5;
+            Backup.Location = new Point(140, 130);
+            Backup.Margin = new Padding(10, 3, 3, 3);
+            Backup.Name = "Backup";
+            Backup.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            Backup.Size = new Size(57, 28);
+            Backup.TabIndex = 11;
+            Backup.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            Backup.UncheckedState.BorderRadius = 13;
+            Backup.UncheckedState.FillColor = Color.FromArgb(39, 44, 66);
+            Backup.UncheckedState.InnerBorderColor = Color.White;
+            Backup.UncheckedState.InnerBorderRadius = 9;
+            Backup.UncheckedState.InnerColor = Color.White;
+            // 
             // txtUnique
             // 
             txtUnique.Anchor = AnchorStyles.Left;
@@ -220,7 +263,7 @@
             txtUnique.BackColor = Color.Transparent;
             txtUnique.BorderRadius = 16;
             txtUnique.Cursor = Cursors.IBeam;
-            txtUnique.CustomizableEdges = customizableEdges5;
+            txtUnique.CustomizableEdges = customizableEdges7;
             txtUnique.DefaultText = "";
             txtUnique.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtUnique.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -238,7 +281,7 @@
             txtUnique.PasswordChar = '\0';
             txtUnique.PlaceholderText = "";
             txtUnique.SelectedText = "";
-            txtUnique.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtUnique.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtUnique.Size = new Size(217, 35);
             txtUnique.TabIndex = 6;
             txtUnique.TextChanged += txtUnique_TextChanged;
@@ -265,15 +308,16 @@
             tableLayoutPanel2.Controls.Add(btnBrowse, 0, 0);
             tableLayoutPanel2.Controls.Add(btnBrowse2, 0, 1);
             tableLayoutPanel2.Controls.Add(btnConvert, 1, 3);
-            tableLayoutPanel2.Location = new Point(3, 196);
+            tableLayoutPanel2.Location = new Point(3, 230);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 4;
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.Size = new Size(355, 150);
+            tableLayoutPanel2.Size = new Size(355, 157);
             tableLayoutPanel2.TabIndex = 3;
+            tableLayoutPanel2.Paint += tableLayoutPanel2_Paint;
             // 
             // textBox5
             // 
@@ -282,7 +326,7 @@
             textBox5.BackColor = Color.Transparent;
             textBox5.BorderRadius = 16;
             textBox5.Cursor = Cursors.IBeam;
-            textBox5.CustomizableEdges = customizableEdges7;
+            textBox5.CustomizableEdges = customizableEdges9;
             textBox5.DefaultText = "";
             textBox5.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             textBox5.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -300,7 +344,7 @@
             textBox5.PlaceholderText = "";
             textBox5.ReadOnly = true;
             textBox5.SelectedText = "";
-            textBox5.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            textBox5.ShadowDecoration.CustomizableEdges = customizableEdges10;
             textBox5.Size = new Size(253, 35);
             textBox5.TabIndex = 8;
             // 
@@ -311,7 +355,7 @@
             textBox4.BackColor = Color.Transparent;
             textBox4.BorderRadius = 16;
             textBox4.Cursor = Cursors.IBeam;
-            textBox4.CustomizableEdges = customizableEdges9;
+            textBox4.CustomizableEdges = customizableEdges11;
             textBox4.DefaultText = "";
             textBox4.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             textBox4.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -329,7 +373,7 @@
             textBox4.PlaceholderText = "";
             textBox4.ReadOnly = true;
             textBox4.SelectedText = "";
-            textBox4.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            textBox4.ShadowDecoration.CustomizableEdges = customizableEdges12;
             textBox4.Size = new Size(253, 35);
             textBox4.TabIndex = 7;
             textBox4.TextChanged += textBox4_TextChanged;
@@ -340,7 +384,7 @@
             btnBrowse.AutoRoundedCorners = true;
             btnBrowse.BorderRadius = 21;
             btnBrowse.Cursor = Cursors.Hand;
-            btnBrowse.CustomizableEdges = customizableEdges11;
+            btnBrowse.CustomizableEdges = customizableEdges13;
             btnBrowse.DisabledState.BorderColor = Color.DarkGray;
             btnBrowse.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBrowse.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -349,7 +393,7 @@
             btnBrowse.ForeColor = Color.White;
             btnBrowse.Location = new Point(3, 3);
             btnBrowse.Name = "btnBrowse";
-            btnBrowse.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnBrowse.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnBrowse.Size = new Size(88, 44);
             btnBrowse.TabIndex = 0;
             btnBrowse.Text = "Xex File";
@@ -361,7 +405,7 @@
             btnBrowse2.AutoRoundedCorners = true;
             btnBrowse2.BorderRadius = 21;
             btnBrowse2.Cursor = Cursors.Hand;
-            btnBrowse2.CustomizableEdges = customizableEdges13;
+            btnBrowse2.CustomizableEdges = customizableEdges15;
             btnBrowse2.DisabledState.BorderColor = Color.DarkGray;
             btnBrowse2.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBrowse2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -370,7 +414,7 @@
             btnBrowse2.ForeColor = Color.White;
             btnBrowse2.Location = new Point(3, 53);
             btnBrowse2.Name = "btnBrowse2";
-            btnBrowse2.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnBrowse2.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnBrowse2.Size = new Size(88, 44);
             btnBrowse2.TabIndex = 1;
             btnBrowse2.Text = "Set File";
@@ -379,9 +423,9 @@
             // btnConvert
             // 
             btnConvert.AutoRoundedCorners = true;
-            btnConvert.BorderRadius = 21;
+            btnConvert.BorderRadius = 24;
             btnConvert.Cursor = Cursors.Hand;
-            btnConvert.CustomizableEdges = customizableEdges15;
+            btnConvert.CustomizableEdges = customizableEdges17;
             btnConvert.DisabledState.BorderColor = Color.DarkGray;
             btnConvert.DisabledState.CustomBorderColor = Color.DarkGray;
             btnConvert.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -392,8 +436,8 @@
             btnConvert.Location = new Point(169, 103);
             btnConvert.Margin = new Padding(75, 3, 3, 3);
             btnConvert.Name = "btnConvert";
-            btnConvert.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnConvert.Size = new Size(88, 44);
+            btnConvert.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnConvert.Size = new Size(86, 51);
             btnConvert.TabIndex = 6;
             btnConvert.Text = "Convert";
             btnConvert.Click += btnConvert_Click;
@@ -420,7 +464,7 @@
             // guna2TextBox1
             // 
             guna2TextBox1.BorderRadius = 22;
-            guna2TextBox1.CustomizableEdges = customizableEdges17;
+            guna2TextBox1.CustomizableEdges = customizableEdges19;
             guna2TextBox1.DefaultText = resources.GetString("guna2TextBox1.DefaultText");
             guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -439,8 +483,8 @@
             guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.ReadOnly = true;
             guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2TextBox1.Size = new Size(446, 351);
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2TextBox1.Size = new Size(446, 447);
             guna2TextBox1.TabIndex = 6;
             // 
             // saveFileDialog1
@@ -463,7 +507,7 @@
             Panel_Right.Location = new Point(364, 0);
             Panel_Right.Name = "Panel_Right";
             Panel_Right.Padding = new Padding(66, 0, 0, 0);
-            Panel_Right.Size = new Size(536, 429);
+            Panel_Right.Size = new Size(536, 529);
             Panel_Right.TabIndex = 1;
             // 
             // flowLayoutPanel2
@@ -475,7 +519,7 @@
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel2.Location = new Point(66, 0);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(470, 429);
+            flowLayoutPanel2.Size = new Size(470, 529);
             flowLayoutPanel2.TabIndex = 0;
             // 
             // MP_Setup_Converter
@@ -490,7 +534,7 @@
             ForeColor = SystemColors.ControlLightLight;
             Margin = new Padding(3, 2, 3, 2);
             Name = "MP_Setup_Converter";
-            Size = new Size(900, 429);
+            Size = new Size(900, 529);
             Panel_Left.ResumeLayout(false);
             Panel_Left.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);
@@ -530,5 +574,7 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Panel Panel_Right;
         private FlowLayoutPanel flowLayoutPanel2;
+        private Label label6;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch Backup;
     }
 }

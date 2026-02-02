@@ -171,7 +171,7 @@ namespace GoldenEye_XBLA_Editor.Controls
         {
             try
             {
-                Class_MP_Converter.Convert_Map(textBox4.Text, textBox5.Text, txtUnique.Text);
+                Class_MP_Converter.Convert_Map(textBox4.Text, textBox5.Text, txtUnique.Text,Backup);
 
             }
             catch (Exception Ex)
@@ -187,6 +187,11 @@ namespace GoldenEye_XBLA_Editor.Controls
         }
 
         private void txtUnique_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

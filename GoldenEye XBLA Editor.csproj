@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net9.0-windows10.0.26100.0</TargetFramework>
     <RootNamespace>GoldenEye_XBLA_Editor</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
@@ -10,9 +10,10 @@
     <ApplicationIcon>Resources\Bond.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <Company>RetroDriven</Company>
-    <Copyright>Copyright ©  2025 - RetroDriven</Copyright>
+    <Copyright>2025 - RetroDriven</Copyright>
     <PackageIcon>Bond.png</PackageIcon>
     <FileVersion>2025.7.24.1</FileVersion>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
   <ItemGroup>

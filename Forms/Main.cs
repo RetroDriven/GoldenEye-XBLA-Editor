@@ -23,6 +23,7 @@ namespace GoldenEye_XBLA_Editor.Forms.Main
             sP_Setup_Converter1.Visible = false;
             briefing1.Visible = false;
             xex_Signer1.Visible = false;
+            mP_Music1.Visible = false;
         }
 
         private void SP_Converter_Click(object sender, EventArgs e)
@@ -41,6 +42,12 @@ namespace GoldenEye_XBLA_Editor.Forms.Main
         {
             Hide_Controls();
             xex_Signer1.Visible = true;
+        }
+
+        private void MP_Music_Click(object sender, EventArgs e)
+        {
+            Hide_Controls();
+            mP_Music1.Visible = true;
         }
     }
 }

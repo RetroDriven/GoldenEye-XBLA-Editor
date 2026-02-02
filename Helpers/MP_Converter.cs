@@ -1,8 +1,9 @@
 ﻿using GoldenEye_XBLA_Editor;
-using System.Text;
+using Guna.UI2.WinForms;
 using System.Diagnostics;
 using System.Globalization;
-using Guna.UI2.WinForms;
+using System.Text;
+using Windows.UI.ViewManagement;
 
 namespace Helpers
 {
@@ -27,7 +28,7 @@ namespace Helpers
         public static CultureInfo resourceCulture;
 
         public static string TempBin = @"C:\RetroDriven_Temp\Temp.bin";
-        public static void Convert_Map(string Xex, string Set, string SysLink)
+        public static void Convert_Map(string Xex, string Set, string SysLink,Guna2ToggleSwitch Backup)
         {
             //Cleanup
             General.Cleanup();
@@ -59,15 +60,12 @@ namespace Helpers
                     File.Delete(@"C:\RetroDriven_Temp\Temp.bin");
                 }
                 Directory.CreateDirectory(@"C:\RetroDriven_Temp");
-                
+
                 //Get Embeded Setup Converter and copy to Temp Directory
                 string SetupConverter = Get_File("setup_converter", "exe");
 
                 //Run the Setup Converter Exe
                 Run_Converter(SetupConverter, @Set, @TempBin, Setup_Value);
-
-                //Get Size of Converted Map
-                long ConvertedBinSize = new FileInfo(@TempBin).Length;
 
                 //Get Stock Map Size
                 int StockMapSizeCheck = Convert.ToInt32(Stock_Map_Size, 16) + 1;
@@ -86,11 +84,15 @@ namespace Helpers
                 else
                 {
                 */
+
+                if (Backup.Checked)
+                {
                     //Backup Xex File
                     Backup_Xex(@Xex);
 
-                    //Write blank Dummy Map(Same size as the Stock Map)
-                    string StockMap = @"C:\RetroDriven_Temp\Dummy_Map.bin";
+                }
+                //Write blank Dummy Map(Same size as the Stock Map)
+                string StockMap = @"C:\RetroDriven_Temp\Dummy_Map.bin";
                     Write_Blank_Map(StockMapSize);
 
                     //MP Selected

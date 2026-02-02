@@ -117,4 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="guna2TextBox4.DefaultText" xml:space="preserve">
+    <value>This will allow you to select the tracks you'd like to randomly play during Multiplayer games.
+
+You can Import/Export your track listings to easily share with others. 
+
+Reset the tracks to their defaults if needed.</value>
+  </data>
 </root>

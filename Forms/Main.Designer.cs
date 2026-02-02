@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -56,7 +54,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             Panel_Top = new Guna.UI2.WinForms.Guna2Panel();
-            Max_Button = new Guna.UI2.WinForms.Guna2ControlBox();
             Min_Button = new Guna.UI2.WinForms.Guna2ControlBox();
             Close_Button = new Guna.UI2.WinForms.Guna2ControlBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -74,10 +71,11 @@
             About = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
             Panel_Main = new Panel();
-            xex_Signer1 = new GoldenEye_XBLA_Editor.Controls.Xex_Signer();
             mP_Setup_Converter1 = new GoldenEye_XBLA_Editor.Controls.MP_Setup_Converter();
             sP_Setup_Converter1 = new GoldenEye_XBLA_Editor.Controls.SP_Setup_Converter();
             briefing1 = new GoldenEye_XBLA_Editor.Controls.Briefing();
+            xex_Signer1 = new GoldenEye_XBLA_Editor.Controls.Xex_Signer();
+            mP_Music1 = new GoldenEye_XBLA_Editor.Controls.MP_Music();
             guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(components);
             guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(components);
             guna2DragControl4 = new Guna.UI2.WinForms.Guna2DragControl(components);
@@ -105,33 +103,16 @@
             Panel_Top.BackColor = Color.FromArgb(24, 25, 26);
             Panel_Top.BorderColor = Color.Transparent;
             Panel_Top.BorderRadius = 18;
-            Panel_Top.Controls.Add(Max_Button);
             Panel_Top.Controls.Add(Min_Button);
             Panel_Top.Controls.Add(Close_Button);
             Panel_Top.Controls.Add(guna2HtmlLabel1);
-            Panel_Top.CustomizableEdges = customizableEdges23;
+            Panel_Top.CustomizableEdges = customizableEdges21;
             Panel_Top.Dock = DockStyle.Top;
             Panel_Top.Location = new Point(0, 0);
             Panel_Top.Name = "Panel_Top";
-            Panel_Top.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            Panel_Top.ShadowDecoration.CustomizableEdges = customizableEdges22;
             Panel_Top.Size = new Size(1214, 38);
             Panel_Top.TabIndex = 0;
-            // 
-            // Max_Button
-            // 
-            Max_Button.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            Max_Button.Animated = true;
-            Max_Button.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            Max_Button.Cursor = Cursors.Hand;
-            Max_Button.CustomizableEdges = customizableEdges17;
-            Max_Button.FillColor = Color.Transparent;
-            Max_Button.IconColor = Color.White;
-            Max_Button.Location = new Point(1149, 8);
-            Max_Button.Name = "Max_Button";
-            Max_Button.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            Max_Button.Size = new Size(23, 19);
-            Max_Button.TabIndex = 4;
-            Max_Button.Visible = false;
             // 
             // Min_Button
             // 
@@ -139,12 +120,12 @@
             Min_Button.Animated = true;
             Min_Button.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             Min_Button.Cursor = Cursors.Hand;
-            Min_Button.CustomizableEdges = customizableEdges19;
+            Min_Button.CustomizableEdges = customizableEdges17;
             Min_Button.FillColor = Color.Transparent;
             Min_Button.IconColor = Color.White;
-            Min_Button.Location = new Point(1120, 7);
+            Min_Button.Location = new Point(1149, 7);
             Min_Button.Name = "Min_Button";
-            Min_Button.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            Min_Button.ShadowDecoration.CustomizableEdges = customizableEdges18;
             Min_Button.Size = new Size(23, 19);
             Min_Button.TabIndex = 3;
             // 
@@ -153,12 +134,12 @@
             Close_Button.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Close_Button.Animated = true;
             Close_Button.Cursor = Cursors.Hand;
-            Close_Button.CustomizableEdges = customizableEdges21;
+            Close_Button.CustomizableEdges = customizableEdges19;
             Close_Button.FillColor = Color.Transparent;
             Close_Button.IconColor = Color.White;
             Close_Button.Location = new Point(1178, 7);
             Close_Button.Name = "Close_Button";
-            Close_Button.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            Close_Button.ShadowDecoration.CustomizableEdges = customizableEdges20;
             Close_Button.Size = new Size(24, 19);
             Close_Button.TabIndex = 1;
             // 
@@ -167,7 +148,7 @@
             guna2HtmlLabel1.Anchor = AnchorStyles.Left;
             guna2HtmlLabel1.AutoSize = false;
             guna2HtmlLabel1.BackColor = Color.FromArgb(24, 25, 26);
-            guna2HtmlLabel1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2HtmlLabel1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             guna2HtmlLabel1.ForeColor = Color.White;
             guna2HtmlLabel1.IsSelectionEnabled = false;
             guna2HtmlLabel1.Location = new Point(12, 8);
@@ -235,7 +216,7 @@
             MP_Converter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             MP_Converter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             MP_Converter.FillColor = Color.FromArgb(24, 30, 52);
-            MP_Converter.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            MP_Converter.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             MP_Converter.ForeColor = Color.White;
             MP_Converter.Location = new Point(3, 40);
             MP_Converter.Margin = new Padding(3, 30, 3, 3);
@@ -266,7 +247,7 @@
             SP_Converter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             SP_Converter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             SP_Converter.FillColor = Color.FromArgb(24, 30, 52);
-            SP_Converter.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            SP_Converter.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             SP_Converter.ForeColor = Color.White;
             SP_Converter.Location = new Point(3, 96);
             SP_Converter.Margin = new Padding(3, 10, 3, 3);
@@ -297,7 +278,7 @@
             Briefing.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             Briefing.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             Briefing.FillColor = Color.FromArgb(24, 30, 52);
-            Briefing.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Briefing.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             Briefing.ForeColor = Color.White;
             Briefing.Location = new Point(3, 152);
             Briefing.Margin = new Padding(3, 10, 3, 3);
@@ -328,7 +309,7 @@
             MP_Music.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             MP_Music.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             MP_Music.FillColor = Color.FromArgb(24, 30, 52);
-            MP_Music.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            MP_Music.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             MP_Music.ForeColor = Color.White;
             MP_Music.Location = new Point(3, 208);
             MP_Music.Margin = new Padding(3, 10, 3, 3);
@@ -339,6 +320,7 @@
             MP_Music.Text = "MP Music Assortment";
             MP_Music.TextAlign = HorizontalAlignment.Left;
             MP_Music.TextOffset = new Point(60, 0);
+            MP_Music.Click += MP_Music_Click;
             // 
             // MP_Weapons
             // 
@@ -358,7 +340,7 @@
             MP_Weapons.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             MP_Weapons.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             MP_Weapons.FillColor = Color.FromArgb(24, 30, 52);
-            MP_Weapons.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            MP_Weapons.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             MP_Weapons.ForeColor = Color.White;
             MP_Weapons.Location = new Point(3, 264);
             MP_Weapons.Margin = new Padding(3, 10, 3, 3);
@@ -388,7 +370,7 @@
             BinInjector.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             BinInjector.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             BinInjector.FillColor = Color.FromArgb(24, 30, 52);
-            BinInjector.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            BinInjector.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             BinInjector.ForeColor = Color.White;
             BinInjector.Location = new Point(3, 320);
             BinInjector.Margin = new Padding(3, 10, 3, 3);
@@ -418,7 +400,7 @@
             XexSign.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             XexSign.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             XexSign.FillColor = Color.FromArgb(24, 30, 52);
-            XexSign.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            XexSign.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             XexSign.ForeColor = Color.White;
             XexSign.Location = new Point(3, 376);
             XexSign.Margin = new Padding(3, 10, 3, 3);
@@ -449,7 +431,7 @@
             About.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             About.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             About.FillColor = Color.FromArgb(24, 30, 52);
-            About.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            About.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             About.ForeColor = Color.White;
             About.Location = new Point(3, 432);
             About.Margin = new Padding(3, 10, 3, 3);
@@ -480,6 +462,7 @@
             Panel_Main.Controls.Add(sP_Setup_Converter1);
             Panel_Main.Controls.Add(briefing1);
             Panel_Main.Controls.Add(xex_Signer1);
+            Panel_Main.Controls.Add(mP_Music1);
             Panel_Main.Dock = DockStyle.Fill;
             Panel_Main.Location = new Point(265, 38);
             Panel_Main.Name = "Panel_Main";
@@ -487,24 +470,13 @@
             Panel_Main.Size = new Size(949, 548);
             Panel_Main.TabIndex = 2;
             // 
-            // xex_Signer1
-            // 
-            xex_Signer1.BackColor = Color.FromArgb(59, 62, 78);
-            xex_Signer1.Dock = DockStyle.Fill;
-            xex_Signer1.ForeColor = SystemColors.ControlLightLight;
-            xex_Signer1.Location = new Point(0, 25);
-            xex_Signer1.Name = "xex_Signer1";
-            xex_Signer1.Padding = new Padding(50, 0, 0, 0);
-            xex_Signer1.Size = new Size(949, 523);
-            xex_Signer1.TabIndex = 3;
-            // 
             // mP_Setup_Converter1
             // 
             mP_Setup_Converter1.AutoSize = true;
             mP_Setup_Converter1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             mP_Setup_Converter1.BackColor = Color.FromArgb(59, 62, 78);
             mP_Setup_Converter1.Dock = DockStyle.Fill;
-            mP_Setup_Converter1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            mP_Setup_Converter1.Font = new Font("Segoe UI", 9F);
             mP_Setup_Converter1.ForeColor = SystemColors.ControlLightLight;
             mP_Setup_Converter1.Location = new Point(0, 25);
             mP_Setup_Converter1.Margin = new Padding(3, 2, 3, 2);
@@ -539,6 +511,28 @@
             briefing1.Size = new Size(949, 523);
             briefing1.TabIndex = 2;
             briefing1.Visible = false;
+            // 
+            // xex_Signer1
+            // 
+            xex_Signer1.BackColor = Color.FromArgb(59, 62, 78);
+            xex_Signer1.Dock = DockStyle.Fill;
+            xex_Signer1.ForeColor = SystemColors.ControlLightLight;
+            xex_Signer1.Location = new Point(0, 25);
+            xex_Signer1.Name = "xex_Signer1";
+            xex_Signer1.Padding = new Padding(50, 0, 0, 0);
+            xex_Signer1.Size = new Size(949, 523);
+            xex_Signer1.TabIndex = 3;
+            // 
+            // mP_Music1
+            // 
+            mP_Music1.BackColor = Color.FromArgb(59, 62, 78);
+            mP_Music1.Dock = DockStyle.Fill;
+            mP_Music1.ForeColor = SystemColors.ControlLightLight;
+            mP_Music1.Location = new Point(0, 25);
+            mP_Music1.Name = "mP_Music1";
+            mP_Music1.Padding = new Padding(50, 0, 0, 0);
+            mP_Music1.Size = new Size(949, 523);
+            mP_Music1.TabIndex = 4;
             // 
             // guna2DragControl2
             // 
@@ -578,7 +572,7 @@
             Controls.Add(Panel_Main);
             Controls.Add(Panel_Menu);
             Controls.Add(Panel_Top);
-            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Font = new Font("Segoe UI", 9F);
             ForeColor = SystemColors.ControlLightLight;
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -620,7 +614,6 @@
         private Controls.MP_Setup_Converter mP_Setup_Converter1;
         private Guna.UI2.WinForms.Guna2Button About;
         private Controls.SP_Setup_Converter sP_Setup_Converter1;
-        private Guna.UI2.WinForms.Guna2ControlBox Max_Button;
         public Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
         public Guna.UI2.WinForms.Guna2DragControl guna2DragControl3;
         public Guna.UI2.WinForms.Guna2DragControl guna2DragControl4;
@@ -629,5 +622,6 @@
         private Controls.Briefing briefing1;
         private Guna.UI2.WinForms.Guna2Button XexSign;
         private Controls.Xex_Signer xex_Signer1;
+        private Controls.MP_Music mP_Music1;
     }
 }

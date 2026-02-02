@@ -8,6 +8,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 using System.Xml.Linq;
 using System.Xml.XPath;
 using System.Xml;
+using Guna.UI2.WinForms;
+using GoldenEye_XBLA_Editor.Controls;
 
 namespace Helpers
 {
@@ -16,7 +18,7 @@ namespace Helpers
         public static void Export_Tracks()
         {
             MPMusic form1 = (MPMusic)Application.OpenForms["MPMusic"];
-
+       
             var fileContent = string.Empty;
             var filePath = string.Empty;
 
@@ -164,16 +166,16 @@ namespace Helpers
             form1.Track_42.SelectedItem = "Runway X Track";
             form1.Track_43.SelectedItem = "Surface 1 Theme";
         }
-        private static void Write_Tracks(string Xex, string Track_Name, int Offset)
+        public static void Write_Tracks(string Xex, string Track_Name, int Offset)
         {
             using (BinaryWriter writer = new BinaryWriter(File.Open(Xex, FileMode.Open, FileAccess.ReadWrite)))
             {
                 //Get Track ID
-                string Weapon_ID = Class_Music.TrackName_To_ID(Track_Name);
+                string Track_ID = Class_Music.TrackName_To_ID(Track_Name);
 
-                byte[] data = new byte[Weapon_ID.Length / 2];
-                for (int i = 0; i < Weapon_ID.Length; i += 2)
-                    data[i / 2] = Convert.ToByte(Weapon_ID.Substring(i, 2), 16);
+                byte[] data = new byte[Track_ID.Length / 2];
+                for (int i = 0; i < Track_ID.Length; i += 2)
+                    data[i / 2] = Convert.ToByte(Track_ID.Substring(i, 2), 16);
                 writer.Seek(Offset, SeekOrigin.Begin);
                 writer.Write(data);
                 writer.Close();

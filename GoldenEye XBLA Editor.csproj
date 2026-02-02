@@ -10,9 +10,9 @@
     <ApplicationIcon>Resources\Bond.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <Company>RetroDriven</Company>
-    <Copyright>2025 - RetroDriven</Copyright>
+    <Copyright>2026 - RetroDriven</Copyright>
     <PackageIcon>Bond.png</PackageIcon>
-    <FileVersion>2025.7.24.1</FileVersion>
+    <FileVersion>2026.2.1.1</FileVersion>
     <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 

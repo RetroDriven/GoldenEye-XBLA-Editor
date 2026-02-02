@@ -355,7 +355,7 @@
             // 
             guna2TextBox4.BorderRadius = 22;
             guna2TextBox4.CustomizableEdges = customizableEdges15;
-            guna2TextBox4.DefaultText = "Import the Briefing File from your N64 Map\r\n\r\n*** Singleplayer Map ***\r\nThe Map/Setup that you used within the Setup Editor.";
+            guna2TextBox4.DefaultText = "Import the Briefing File from your N64 Map\r\n\r\nSingleplayer Map\r\n---------------------\r\nThe Map/Setup that you used within the Setup Editor.";
             guna2TextBox4.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox4.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             guna2TextBox4.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);

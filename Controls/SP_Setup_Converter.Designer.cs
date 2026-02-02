@@ -91,7 +91,7 @@
             btnConvert.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnConvert.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnConvert.Enabled = false;
-            btnConvert.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnConvert.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             btnConvert.ForeColor = Color.White;
             btnConvert.Location = new Point(169, 103);
             btnConvert.Margin = new Padding(75, 3, 3, 3);
@@ -114,7 +114,7 @@
             SP_Map.DropDownStyle = ComboBoxStyle.DropDownList;
             SP_Map.FillColor = Color.FromArgb(39, 44, 66);
             SP_Map.FocusedColor = Color.Empty;
-            SP_Map.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            SP_Map.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             SP_Map.ForeColor = SystemColors.ControlLightLight;
             SP_Map.ItemHeight = 30;
             SP_Map.Items.AddRange(new object[] { "Archives", "Aztec", "Bunker 1", "Bunker 2", "Caverns", "Control", "Cradle", "Dam", "Depot", "Egyptian", "Facility", "Frigate", "Jungle", "Runway", "Silo", "Statue", "Streets", "Surface 1", "Surface 2", "Train" });
@@ -141,7 +141,7 @@
             textBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             textBox4.FillColor = Color.FromArgb(39, 44, 66);
             textBox4.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            textBox4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             textBox4.ForeColor = SystemColors.ControlLightLight;
             textBox4.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             textBox4.Location = new Point(98, 7);
@@ -166,7 +166,7 @@
             btnBrowse.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBrowse.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBrowse.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBrowse.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBrowse.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             btnBrowse.ForeColor = Color.White;
             btnBrowse.Location = new Point(3, 3);
             btnBrowse.Name = "btnBrowse";
@@ -187,7 +187,7 @@
             btnBrowse2.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBrowse2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBrowse2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBrowse2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBrowse2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             btnBrowse2.ForeColor = Color.White;
             btnBrowse2.Location = new Point(3, 53);
             btnBrowse2.Name = "btnBrowse2";
@@ -201,7 +201,7 @@
             // 
             label2.Anchor = AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label2.Location = new Point(3, 11);
             label2.Name = "label2";
             label2.Size = new Size(129, 20);
@@ -243,7 +243,7 @@
             textBox5.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             textBox5.FillColor = Color.FromArgb(39, 44, 66);
             textBox5.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            textBox5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             textBox5.ForeColor = SystemColors.ControlLightLight;
             textBox5.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             textBox5.Location = new Point(98, 57);
@@ -267,7 +267,7 @@
             // 
             label1.Anchor = AnchorStyles.Left;
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
             label1.Padding = new Padding(0, 19, 0, 0);
@@ -339,7 +339,7 @@
             // 
             label6.Anchor = AnchorStyles.Left;
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             label6.Location = new Point(3, 19);
             label6.Name = "label6";
             label6.Size = new Size(108, 25);
@@ -364,7 +364,7 @@
             guna2TextBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox4.FillColor = Color.FromArgb(39, 44, 66);
             guna2TextBox4.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2TextBox4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             guna2TextBox4.ForeColor = SystemColors.ControlLightLight;
             guna2TextBox4.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox4.Location = new Point(4, 64);

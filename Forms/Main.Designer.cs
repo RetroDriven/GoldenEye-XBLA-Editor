@@ -111,7 +111,7 @@
             Panel_Top.Location = new Point(0, 0);
             Panel_Top.Name = "Panel_Top";
             Panel_Top.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            Panel_Top.Size = new Size(1214, 38);
+            Panel_Top.Size = new Size(1249, 38);
             Panel_Top.TabIndex = 0;
             // 
             // Min_Button
@@ -123,7 +123,7 @@
             Min_Button.CustomizableEdges = customizableEdges17;
             Min_Button.FillColor = Color.Transparent;
             Min_Button.IconColor = Color.White;
-            Min_Button.Location = new Point(1149, 7);
+            Min_Button.Location = new Point(1184, 7);
             Min_Button.Name = "Min_Button";
             Min_Button.ShadowDecoration.CustomizableEdges = customizableEdges18;
             Min_Button.Size = new Size(23, 19);
@@ -137,7 +137,7 @@
             Close_Button.CustomizableEdges = customizableEdges19;
             Close_Button.FillColor = Color.Transparent;
             Close_Button.IconColor = Color.White;
-            Close_Button.Location = new Point(1178, 7);
+            Close_Button.Location = new Point(1213, 7);
             Close_Button.Name = "Close_Button";
             Close_Button.ShadowDecoration.CustomizableEdges = customizableEdges20;
             Close_Button.Size = new Size(24, 19);
@@ -176,7 +176,7 @@
             Panel_Menu.Dock = DockStyle.Left;
             Panel_Menu.Location = new Point(0, 38);
             Panel_Menu.Name = "Panel_Menu";
-            Panel_Menu.Size = new Size(265, 548);
+            Panel_Menu.Size = new Size(265, 608);
             Panel_Menu.TabIndex = 1;
             // 
             // Flow_Menu
@@ -195,7 +195,7 @@
             Flow_Menu.Location = new Point(0, 62);
             Flow_Menu.Name = "Flow_Menu";
             Flow_Menu.Padding = new Padding(0, 10, 0, 0);
-            Flow_Menu.Size = new Size(265, 486);
+            Flow_Menu.Size = new Size(265, 546);
             Flow_Menu.TabIndex = 0;
             // 
             // MP_Converter
@@ -467,7 +467,7 @@
             Panel_Main.Location = new Point(265, 38);
             Panel_Main.Name = "Panel_Main";
             Panel_Main.Padding = new Padding(0, 25, 0, 0);
-            Panel_Main.Size = new Size(949, 548);
+            Panel_Main.Size = new Size(984, 608);
             Panel_Main.TabIndex = 2;
             // 
             // mP_Setup_Converter1
@@ -482,7 +482,7 @@
             mP_Setup_Converter1.Margin = new Padding(3, 2, 3, 2);
             mP_Setup_Converter1.Name = "mP_Setup_Converter1";
             mP_Setup_Converter1.Padding = new Padding(50, 0, 0, 0);
-            mP_Setup_Converter1.Size = new Size(949, 523);
+            mP_Setup_Converter1.Size = new Size(984, 583);
             mP_Setup_Converter1.TabIndex = 0;
             // 
             // sP_Setup_Converter1
@@ -495,7 +495,7 @@
             sP_Setup_Converter1.Margin = new Padding(3, 4, 3, 4);
             sP_Setup_Converter1.Name = "sP_Setup_Converter1";
             sP_Setup_Converter1.Padding = new Padding(50, 0, 0, 0);
-            sP_Setup_Converter1.Size = new Size(949, 523);
+            sP_Setup_Converter1.Size = new Size(984, 583);
             sP_Setup_Converter1.TabIndex = 1;
             sP_Setup_Converter1.Visible = false;
             // 
@@ -508,7 +508,7 @@
             briefing1.Location = new Point(0, 25);
             briefing1.Name = "briefing1";
             briefing1.Padding = new Padding(50, 0, 0, 0);
-            briefing1.Size = new Size(949, 523);
+            briefing1.Size = new Size(984, 583);
             briefing1.TabIndex = 2;
             briefing1.Visible = false;
             // 
@@ -520,7 +520,7 @@
             xex_Signer1.Location = new Point(0, 25);
             xex_Signer1.Name = "xex_Signer1";
             xex_Signer1.Padding = new Padding(50, 0, 0, 0);
-            xex_Signer1.Size = new Size(949, 523);
+            xex_Signer1.Size = new Size(984, 583);
             xex_Signer1.TabIndex = 3;
             // 
             // mP_Music1
@@ -531,7 +531,7 @@
             mP_Music1.Location = new Point(0, 25);
             mP_Music1.Name = "mP_Music1";
             mP_Music1.Padding = new Padding(50, 0, 0, 0);
-            mP_Music1.Size = new Size(949, 523);
+            mP_Music1.Size = new Size(984, 583);
             mP_Music1.TabIndex = 4;
             // 
             // guna2DragControl2
@@ -568,7 +568,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(59, 62, 78);
-            ClientSize = new Size(1214, 586);
+            ClientSize = new Size(1249, 646);
             Controls.Add(Panel_Main);
             Controls.Add(Panel_Menu);
             Controls.Add(Panel_Top);

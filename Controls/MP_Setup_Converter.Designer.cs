@@ -90,7 +90,7 @@
             Panel_Left.Dock = DockStyle.Left;
             Panel_Left.Location = new Point(0, 0);
             Panel_Left.Name = "Panel_Left";
-            Panel_Left.Size = new Size(364, 529);
+            Panel_Left.Size = new Size(364, 569);
             Panel_Left.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -111,7 +111,7 @@
             // 
             label1.Anchor = AnchorStyles.Left;
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
             label1.Padding = new Padding(0, 19, 0, 0);
@@ -154,7 +154,7 @@
             // 
             label6.Anchor = AnchorStyles.Right;
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label6.Location = new Point(37, 134);
             label6.Name = "label6";
             label6.Size = new Size(90, 20);
@@ -165,7 +165,7 @@
             // 
             label4.Anchor = AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label4.Location = new Point(14, 95);
             label4.Name = "label4";
             label4.Size = new Size(113, 20);
@@ -176,7 +176,7 @@
             // 
             label3.Anchor = AnchorStyles.Right;
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label3.Location = new Point(56, 53);
             label3.Name = "label3";
             label3.Size = new Size(71, 20);
@@ -195,7 +195,7 @@
             MP_Slot.DropDownStyle = ComboBoxStyle.DropDownList;
             MP_Slot.FillColor = Color.FromArgb(39, 44, 66);
             MP_Slot.FocusedColor = Color.Empty;
-            MP_Slot.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            MP_Slot.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             MP_Slot.ForeColor = SystemColors.ControlLightLight;
             MP_Slot.ItemHeight = 30;
             MP_Slot.Items.AddRange(new object[] { "Archives", "Basement", "Bunker", "Caverns", "Caves", "Complex", "Dam", "Depot", "Egyptian", "Facility", "Frigate", "Library", "Stack", "Temple" });
@@ -219,7 +219,7 @@
             MP_Map.DropDownStyle = ComboBoxStyle.DropDownList;
             MP_Map.FillColor = Color.FromArgb(39, 44, 66);
             MP_Map.FocusedColor = Color.Empty;
-            MP_Map.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            MP_Map.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             MP_Map.ForeColor = SystemColors.ControlLightLight;
             MP_Map.ItemHeight = 30;
             MP_Map.Items.AddRange(new object[] { "Archives", "Aztec", "Basement", "Bunker", "Caverns", "Caves", "Complex", "Control", "Cradle", "Dam", "Depot", "Egyptian", "Facility", "Frigate", "Jungle", "Library", "Runway", "Silo", "Stack", "Statue", "Streets", "Surface 1", "Surface 2", "Temple", "Train" });
@@ -235,6 +235,7 @@
             // 
             Backup.Anchor = AnchorStyles.Left;
             Backup.AutoRoundedCorners = true;
+            Backup.Checked = true;
             Backup.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
             Backup.CheckedState.BorderRadius = 13;
             Backup.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
@@ -271,7 +272,7 @@
             txtUnique.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtUnique.FillColor = Color.FromArgb(39, 44, 66);
             txtUnique.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUnique.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            txtUnique.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             txtUnique.ForeColor = SystemColors.ControlLightLight;
             txtUnique.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUnique.Location = new Point(134, 88);
@@ -290,7 +291,7 @@
             // 
             label2.Anchor = AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label2.Location = new Point(3, 11);
             label2.Name = "label2";
             label2.Size = new Size(124, 20);
@@ -334,7 +335,7 @@
             textBox5.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             textBox5.FillColor = Color.FromArgb(39, 44, 66);
             textBox5.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            textBox5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox5.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             textBox5.ForeColor = SystemColors.ControlLightLight;
             textBox5.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             textBox5.Location = new Point(98, 57);
@@ -363,7 +364,7 @@
             textBox4.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             textBox4.FillColor = Color.FromArgb(39, 44, 66);
             textBox4.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            textBox4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            textBox4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             textBox4.ForeColor = SystemColors.ControlLightLight;
             textBox4.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             textBox4.Location = new Point(98, 7);
@@ -389,7 +390,7 @@
             btnBrowse.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBrowse.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBrowse.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBrowse.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBrowse.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             btnBrowse.ForeColor = Color.White;
             btnBrowse.Location = new Point(3, 3);
             btnBrowse.Name = "btnBrowse";
@@ -410,7 +411,7 @@
             btnBrowse2.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBrowse2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBrowse2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBrowse2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBrowse2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             btnBrowse2.ForeColor = Color.White;
             btnBrowse2.Location = new Point(3, 53);
             btnBrowse2.Name = "btnBrowse2";
@@ -431,7 +432,7 @@
             btnConvert.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnConvert.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnConvert.Enabled = false;
-            btnConvert.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnConvert.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             btnConvert.ForeColor = Color.White;
             btnConvert.Location = new Point(169, 103);
             btnConvert.Margin = new Padding(75, 3, 3, 3);
@@ -446,7 +447,7 @@
             // 
             label5.Anchor = AnchorStyles.Left;
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             label5.Location = new Point(3, 0);
             label5.Name = "label5";
             label5.Padding = new Padding(0, 19, 0, 0);
@@ -472,7 +473,7 @@
             guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             guna2TextBox1.FillColor = Color.FromArgb(39, 44, 66);
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2TextBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold);
             guna2TextBox1.ForeColor = SystemColors.ControlLightLight;
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Location = new Point(4, 64);
@@ -484,7 +485,7 @@
             guna2TextBox1.ReadOnly = true;
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2TextBox1.Size = new Size(446, 447);
+            guna2TextBox1.Size = new Size(446, 475);
             guna2TextBox1.TabIndex = 6;
             // 
             // saveFileDialog1
@@ -507,7 +508,7 @@
             Panel_Right.Location = new Point(364, 0);
             Panel_Right.Name = "Panel_Right";
             Panel_Right.Padding = new Padding(66, 0, 0, 0);
-            Panel_Right.Size = new Size(536, 529);
+            Panel_Right.Size = new Size(536, 569);
             Panel_Right.TabIndex = 1;
             // 
             // flowLayoutPanel2
@@ -519,7 +520,7 @@
             flowLayoutPanel2.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel2.Location = new Point(66, 0);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(470, 529);
+            flowLayoutPanel2.Size = new Size(470, 569);
             flowLayoutPanel2.TabIndex = 0;
             // 
             // MP_Setup_Converter
@@ -530,11 +531,11 @@
             BackColor = Color.FromArgb(59, 62, 78);
             Controls.Add(Panel_Right);
             Controls.Add(Panel_Left);
-            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Font = new Font("Segoe UI", 9F);
             ForeColor = SystemColors.ControlLightLight;
             Margin = new Padding(3, 2, 3, 2);
             Name = "MP_Setup_Converter";
-            Size = new Size(900, 529);
+            Size = new Size(900, 569);
             Panel_Left.ResumeLayout(false);
             Panel_Left.PerformLayout();
             flowLayoutPanel1.ResumeLayout(false);

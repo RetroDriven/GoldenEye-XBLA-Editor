@@ -120,18 +120,22 @@
   <data name="guna2TextBox1.DefaultText" xml:space="preserve">
     <value>Convert your N64 Maps from the GoldenEye Setup Editor
 
-*** Multiplayer Map ***
+Multiplayer Map
+-------------------
 The Map/Setup that you used within the Setup Editor.
 
-*** Map Slot ***
+Map Slot
+-----------
 The Multiplayer Map Slot that you are replacing within the Level Select Screen.
 
-*** System Link ID ***
+System Link ID
+-----------------
 Unique Identifier within the Xex FIle. This will help make sure the same Xex File is used by all players to avoid issues during System Link games.
 
 Ex: NewMapsv1
 
-*** Backup Xex ***
+Backup Xex
+--------------
 Enable this option if you'd like to keep a backup copy of your Xex before generating a new version. This will get saved into a "Xex_Backups" folder.
 
 Note: This will break the Single Player Map if one exists for it.</value>

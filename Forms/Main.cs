@@ -24,6 +24,7 @@ namespace GoldenEye_XBLA_Editor.Forms.Main
             briefing1.Visible = false;
             xex_Signer1.Visible = false;
             mP_Music1.Visible = false;
+            mP_Weapon_Set1.Visible = false;
         }
 
         private void SP_Converter_Click(object sender, EventArgs e)
@@ -48,6 +49,12 @@ namespace GoldenEye_XBLA_Editor.Forms.Main
         {
             Hide_Controls();
             mP_Music1.Visible = true;
+        }
+
+        private void MP_Weapons_Click(object sender, EventArgs e)
+        {
+            Hide_Controls();
+            mP_Weapon_Set1.Visible = true;
         }
     }
 }

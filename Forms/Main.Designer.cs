@@ -76,6 +76,7 @@
             briefing1 = new GoldenEye_XBLA_Editor.Controls.Briefing();
             xex_Signer1 = new GoldenEye_XBLA_Editor.Controls.Xex_Signer();
             mP_Music1 = new GoldenEye_XBLA_Editor.Controls.MP_Music();
+            mP_Weapon_Set1 = new GoldenEye_XBLA_Editor.Controls.MP_Weapon_Set();
             guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(components);
             guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(components);
             guna2DragControl4 = new Guna.UI2.WinForms.Guna2DragControl(components);
@@ -111,7 +112,7 @@
             Panel_Top.Location = new Point(0, 0);
             Panel_Top.Name = "Panel_Top";
             Panel_Top.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            Panel_Top.Size = new Size(1249, 38);
+            Panel_Top.Size = new Size(1350, 38);
             Panel_Top.TabIndex = 0;
             // 
             // Min_Button
@@ -123,7 +124,7 @@
             Min_Button.CustomizableEdges = customizableEdges17;
             Min_Button.FillColor = Color.Transparent;
             Min_Button.IconColor = Color.White;
-            Min_Button.Location = new Point(1184, 7);
+            Min_Button.Location = new Point(1285, 7);
             Min_Button.Name = "Min_Button";
             Min_Button.ShadowDecoration.CustomizableEdges = customizableEdges18;
             Min_Button.Size = new Size(23, 19);
@@ -137,7 +138,7 @@
             Close_Button.CustomizableEdges = customizableEdges19;
             Close_Button.FillColor = Color.Transparent;
             Close_Button.IconColor = Color.White;
-            Close_Button.Location = new Point(1213, 7);
+            Close_Button.Location = new Point(1314, 7);
             Close_Button.Name = "Close_Button";
             Close_Button.ShadowDecoration.CustomizableEdges = customizableEdges20;
             Close_Button.Size = new Size(24, 19);
@@ -176,7 +177,7 @@
             Panel_Menu.Dock = DockStyle.Left;
             Panel_Menu.Location = new Point(0, 38);
             Panel_Menu.Name = "Panel_Menu";
-            Panel_Menu.Size = new Size(265, 608);
+            Panel_Menu.Size = new Size(265, 725);
             Panel_Menu.TabIndex = 1;
             // 
             // Flow_Menu
@@ -195,7 +196,7 @@
             Flow_Menu.Location = new Point(0, 62);
             Flow_Menu.Name = "Flow_Menu";
             Flow_Menu.Padding = new Padding(0, 10, 0, 0);
-            Flow_Menu.Size = new Size(265, 546);
+            Flow_Menu.Size = new Size(265, 663);
             Flow_Menu.TabIndex = 0;
             // 
             // MP_Converter
@@ -351,6 +352,7 @@
             MP_Weapons.Text = "MP Weapon Set Editor";
             MP_Weapons.TextAlign = HorizontalAlignment.Left;
             MP_Weapons.TextOffset = new Point(60, 0);
+            MP_Weapons.Click += MP_Weapons_Click;
             // 
             // BinInjector
             // 
@@ -463,11 +465,12 @@
             Panel_Main.Controls.Add(briefing1);
             Panel_Main.Controls.Add(xex_Signer1);
             Panel_Main.Controls.Add(mP_Music1);
+            Panel_Main.Controls.Add(mP_Weapon_Set1);
             Panel_Main.Dock = DockStyle.Fill;
             Panel_Main.Location = new Point(265, 38);
             Panel_Main.Name = "Panel_Main";
             Panel_Main.Padding = new Padding(0, 25, 0, 0);
-            Panel_Main.Size = new Size(984, 608);
+            Panel_Main.Size = new Size(1085, 725);
             Panel_Main.TabIndex = 2;
             // 
             // mP_Setup_Converter1
@@ -481,8 +484,8 @@
             mP_Setup_Converter1.Location = new Point(0, 25);
             mP_Setup_Converter1.Margin = new Padding(3, 2, 3, 2);
             mP_Setup_Converter1.Name = "mP_Setup_Converter1";
-            mP_Setup_Converter1.Padding = new Padding(50, 0, 0, 0);
-            mP_Setup_Converter1.Size = new Size(984, 583);
+            mP_Setup_Converter1.Padding = new Padding(90, 70, 0, 0);
+            mP_Setup_Converter1.Size = new Size(1085, 700);
             mP_Setup_Converter1.TabIndex = 0;
             // 
             // sP_Setup_Converter1
@@ -494,8 +497,8 @@
             sP_Setup_Converter1.Location = new Point(0, 25);
             sP_Setup_Converter1.Margin = new Padding(3, 4, 3, 4);
             sP_Setup_Converter1.Name = "sP_Setup_Converter1";
-            sP_Setup_Converter1.Padding = new Padding(50, 0, 0, 0);
-            sP_Setup_Converter1.Size = new Size(984, 583);
+            sP_Setup_Converter1.Padding = new Padding(100, 150, 0, 0);
+            sP_Setup_Converter1.Size = new Size(1085, 700);
             sP_Setup_Converter1.TabIndex = 1;
             sP_Setup_Converter1.Visible = false;
             // 
@@ -507,8 +510,8 @@
             briefing1.ForeColor = SystemColors.ControlLightLight;
             briefing1.Location = new Point(0, 25);
             briefing1.Name = "briefing1";
-            briefing1.Padding = new Padding(50, 0, 0, 0);
-            briefing1.Size = new Size(984, 583);
+            briefing1.Padding = new Padding(100, 150, 0, 0);
+            briefing1.Size = new Size(1085, 700);
             briefing1.TabIndex = 2;
             briefing1.Visible = false;
             // 
@@ -519,8 +522,8 @@
             xex_Signer1.ForeColor = SystemColors.ControlLightLight;
             xex_Signer1.Location = new Point(0, 25);
             xex_Signer1.Name = "xex_Signer1";
-            xex_Signer1.Padding = new Padding(50, 0, 0, 0);
-            xex_Signer1.Size = new Size(984, 583);
+            xex_Signer1.Padding = new Padding(100, 200, 0, 0);
+            xex_Signer1.Size = new Size(1085, 700);
             xex_Signer1.TabIndex = 3;
             // 
             // mP_Music1
@@ -530,9 +533,20 @@
             mP_Music1.ForeColor = SystemColors.ControlLightLight;
             mP_Music1.Location = new Point(0, 25);
             mP_Music1.Name = "mP_Music1";
-            mP_Music1.Padding = new Padding(50, 0, 0, 0);
-            mP_Music1.Size = new Size(984, 583);
+            mP_Music1.Padding = new Padding(100, 100, 0, 0);
+            mP_Music1.Size = new Size(1085, 700);
             mP_Music1.TabIndex = 4;
+            // 
+            // mP_Weapon_Set1
+            // 
+            mP_Weapon_Set1.BackColor = Color.FromArgb(59, 62, 78);
+            mP_Weapon_Set1.Dock = DockStyle.Fill;
+            mP_Weapon_Set1.ForeColor = SystemColors.ControlLightLight;
+            mP_Weapon_Set1.Location = new Point(0, 25);
+            mP_Weapon_Set1.Name = "mP_Weapon_Set1";
+            mP_Weapon_Set1.Padding = new Padding(30, 0, 0, 0);
+            mP_Weapon_Set1.Size = new Size(1085, 700);
+            mP_Weapon_Set1.TabIndex = 6;
             // 
             // guna2DragControl2
             // 
@@ -568,7 +582,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(59, 62, 78);
-            ClientSize = new Size(1249, 646);
+            ClientSize = new Size(1350, 763);
             Controls.Add(Panel_Main);
             Controls.Add(Panel_Menu);
             Controls.Add(Panel_Top);
@@ -623,5 +637,6 @@
         private Guna.UI2.WinForms.Guna2Button XexSign;
         private Controls.Xex_Signer xex_Signer1;
         private Controls.MP_Music mP_Music1;
+        private Controls.MP_Weapon_Set mP_Weapon_Set1;
     }
 }

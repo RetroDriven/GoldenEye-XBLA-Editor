@@ -39,7 +39,7 @@ namespace GoldenEye_XBLA_Editor
         {
             try
             {
-                Class_Weapons.Open_Xex();
+                Class_Weapon_Sets.Open_Xex();
             }
             catch (Exception Ex)
             {
@@ -51,7 +51,7 @@ namespace GoldenEye_XBLA_Editor
         {
             try
             {
-                Class_Weapons.Edit_Xex();
+                Class_Weapon_Sets.Edit_Xex();
             }
             catch (Exception Ex)
             {
@@ -68,7 +68,7 @@ namespace GoldenEye_XBLA_Editor
         {
             try
             {
-                Class_Weapons.Reset_Weapons();
+                Class_Weapon_Sets.Reset_Weapons();
             }
             catch (Exception Ex)
             {
@@ -78,84 +78,84 @@ namespace GoldenEye_XBLA_Editor
 
         private void resetSlappersOnlyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Slappers");
+            Class_Weapon_Sets.Reset("Slappers");
         }
 
         private void resetPistolsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Pistols");
+            Class_Weapon_Sets.Reset("Pistols");
         }
 
         private void resetThrowingKnivesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Throwing Knives");
+            Class_Weapon_Sets.Reset("Throwing Knives");
         }
 
         private void resetAutomaticsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Automatics");
+            Class_Weapon_Sets.Reset("Automatics");
         }
 
         private void powerWeaponsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Power Weapons");
+            Class_Weapon_Sets.Reset("Power Weapons");
         }
 
         private void resetSniperRifelsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Snipers");
+            Class_Weapon_Sets.Reset("Snipers");
         }
 
         private void resetGrenadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Grenades");
+            Class_Weapon_Sets.Reset("Grenades");
         }
 
         private void resetRemoteMinesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Remote Mines");
+            Class_Weapon_Sets.Reset("Remote Mines");
         }
 
         private void resetGrenadeLaunchersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Grenade Launchers");
+            Class_Weapon_Sets.Reset("Grenade Launchers");
         }
 
         private void resetTimedMinesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Timed Mines");
+            Class_Weapon_Sets.Reset("Timed Mines");
         }
 
         private void resetProximityMinesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Proximity Mines");
+            Class_Weapon_Sets.Reset("Proximity Mines");
         }
 
         private void resetRocketsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Rockets");
+            Class_Weapon_Sets.Reset("Rockets");
         }
 
         private void resetLasersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Lasers");
+            Class_Weapon_Sets.Reset("Lasers");
         }
 
         private void resetGoldenGunToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Golden Gun");
+            Class_Weapon_Sets.Reset("Golden Gun");
         }
 
         private void resetHuntingKnivesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Class_Weapons.Reset("Hunting Knives");
+            Class_Weapon_Sets.Reset("Hunting Knives");
         }
 
         private void exportWeaponSetsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                Class_Weapons.Export_Weapons();
+                Class_Weapon_Sets.Export_Weapons();
 
                 MessageBox.Show("Weapon Sets Exported Successfully!", "Export Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -169,7 +169,7 @@ namespace GoldenEye_XBLA_Editor
         {
             try
             {
-                Class_Weapons.Import_Weapons();
+                Class_Weapon_Sets.Import_Weapons();
 
                 MessageBox.Show("Weapon Sets Imported Successfully!", "Export Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

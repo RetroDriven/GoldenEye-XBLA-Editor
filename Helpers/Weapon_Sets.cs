@@ -10,7 +10,7 @@ using System.Xml.XPath;
 
 namespace Helpers
 {
-    public class Class_Weapons
+    public class Class_Weapon_Sets
     {
         public static void Reset(string Weapon_Set)
         {

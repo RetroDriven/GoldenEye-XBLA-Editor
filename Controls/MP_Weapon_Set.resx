@@ -122,6 +122,10 @@
 
 You can Import/Export your weapon sets to easily share with others or as a way to back them up if needed.
 
-Reset the each and/or all weapon sets to their defaults if needed.</value>
+Reset the each and/or all weapon sets to their defaults if needed.
+
+Text ID Offset and Text ID Value
+---------------------------------------
+This is useful information if you are using your own custom Language files. For example, if you wanted to change the name of Slappers Only to a different Weapon Set name in the game.</value>
   </data>
 </root>

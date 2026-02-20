@@ -797,6 +797,7 @@
             Export.Size = new Size(171, 38);
             Export.TabIndex = 8;
             Export.Text = "Export Weapon Sets";
+            Export.Click += Export_Click;
             // 
             // Reset
             // 
@@ -818,6 +819,7 @@
             Reset.Size = new Size(188, 38);
             Reset.TabIndex = 9;
             Reset.Text = "Reset All Weapon Sets";
+            Reset.Click += Reset_Click;
             // 
             // Import
             // 
@@ -7594,7 +7596,7 @@
             guna2TextBox4.ReadOnly = true;
             guna2TextBox4.SelectedText = "";
             guna2TextBox4.ShadowDecoration.CustomizableEdges = customizableEdges338;
-            guna2TextBox4.Size = new Size(353, 214);
+            guna2TextBox4.Size = new Size(353, 359);
             guna2TextBox4.TabIndex = 9;
             // 
             // tableLayoutPanel3
@@ -7608,7 +7610,7 @@
             tableLayoutPanel3.Controls.Add(XexFileName, 1, 0);
             tableLayoutPanel3.Controls.Add(btnBrowse, 0, 0);
             tableLayoutPanel3.Controls.Add(btnEdit, 1, 3);
-            tableLayoutPanel3.Location = new Point(3, 221);
+            tableLayoutPanel3.Location = new Point(3, 366);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.Padding = new Padding(0, 50, 0, 0);
             tableLayoutPanel3.RowCount = 4;
@@ -7730,6 +7732,7 @@
             btnEdit.Size = new Size(86, 51);
             btnEdit.TabIndex = 6;
             btnEdit.Text = "Edit";
+            btnEdit.Click += btnEdit_Click;
             // 
             // MP_Weapon_Set
             // 

@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using System.Xml.Linq;
 using System.Xml.XPath;
 
@@ -15,6 +17,8 @@ namespace GoldenEye_XBLA_Editor.Controls
 {
     public partial class MP_Weapon_Set : UserControl
     {
+        public CultureInfo resourceCulture;
+
         public MP_Weapon_Set()
         {
             InitializeComponent();
@@ -242,6 +246,245 @@ namespace GoldenEye_XBLA_Editor.Controls
             catch (Exception Ex)
             {
                 General.Message(Ex.Message.ToString());
+            }
+        }
+
+        public void Export_Weapons()
+        {
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                //string path = @"C:\";
+                //openFileDialog.InitialDirectory = path;
+                saveFileDialog.Filter = "XML Files (*.xml)|*.xml";
+                saveFileDialog.FilterIndex = 2;
+                saveFileDialog.RestoreDirectory = true;
+                //MessageBox.Show(path);
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    filePath = saveFileDialog.FileName;
+
+
+                    XmlWriterSettings xmlWriterSettings = new XmlWriterSettings()
+                    {
+                        Indent = true,
+                        IndentChars = "\t",
+                        NewLineOnAttributes = true
+
+                    };
+
+                    using (XmlWriter w = XmlWriter.Create(filePath, xmlWriterSettings))
+                    {
+                        w.WriteStartDocument();
+                        w.WriteStartElement("Weapon_Sets");
+
+                        //Slappers
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Slappers Only!");
+                        w.WriteElementString("Weapon_1", W1_Slappers.Text);
+                        w.WriteElementString("Weapon_2", W2_Slappers.Text);
+                        w.WriteElementString("Weapon_3", W3_Slappers.Text);
+                        w.WriteElementString("Weapon_4", W4_Slappers.Text);
+                        w.WriteElementString("Weapon_5", W5_Slappers.Text);
+                        w.WriteElementString("Weapon_6", W6_Slappers.Text);
+                        w.WriteElementString("Weapon_7", W7_Slappers.Text);
+                        w.WriteElementString("Weapon_8", W8_Slappers.Text);
+                        w.WriteEndElement();
+
+                        //Pistols
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Pistols");
+                        w.WriteElementString("Weapon_1", W1_Pistols.Text);
+                        w.WriteElementString("Weapon_2", W2_Pistols.Text);
+                        w.WriteElementString("Weapon_3", W3_Pistols.Text);
+                        w.WriteElementString("Weapon_4", W4_Pistols.Text);
+                        w.WriteElementString("Weapon_5", W5_Pistols.Text);
+                        w.WriteElementString("Weapon_6", W6_Pistols.Text);
+                        w.WriteElementString("Weapon_7", W7_Pistols.Text);
+                        w.WriteElementString("Weapon_8", W8_Pistols.Text);
+                        w.WriteEndElement();
+
+
+                        //Throwing Knives
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Throwing Knives");
+                        w.WriteElementString("Weapon_1", W1_TK.Text);
+                        w.WriteElementString("Weapon_2", W2_TK.Text);
+                        w.WriteElementString("Weapon_3", W3_TK.Text);
+                        w.WriteElementString("Weapon_4", W4_TK.Text);
+                        w.WriteElementString("Weapon_5", W5_TK.Text);
+                        w.WriteElementString("Weapon_6", W6_TK.Text);
+                        w.WriteElementString("Weapon_7", W7_TK.Text);
+                        w.WriteElementString("Weapon_8", W8_TK.Text);
+                        w.WriteEndElement();
+
+                        //Automatics
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Automatics");
+                        w.WriteElementString("Weapon_1", W1_Automatics.Text);
+                        w.WriteElementString("Weapon_2", W2_Automatics.Text);
+                        w.WriteElementString("Weapon_3", W3_Automatics.Text);
+                        w.WriteElementString("Weapon_4", W4_Automatics.Text);
+                        w.WriteElementString("Weapon_5", W5_Automatics.Text);
+                        w.WriteElementString("Weapon_6", W6_Automatics.Text);
+                        w.WriteElementString("Weapon_7", W7_Automatics.Text);
+                        w.WriteElementString("Weapon_8", W8_Automatics.Text);
+                        w.WriteEndElement();
+
+                        //Power Weapons
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Power Weapons");
+                        w.WriteElementString("Weapon_1", W1_PW.Text);
+                        w.WriteElementString("Weapon_2", W2_PW.Text);
+                        w.WriteElementString("Weapon_3", W3_PW.Text);
+                        w.WriteElementString("Weapon_4", W4_PW.Text);
+                        w.WriteElementString("Weapon_5", W5_PW.Text);
+                        w.WriteElementString("Weapon_6", W6_PW.Text);
+                        w.WriteElementString("Weapon_7", W7_PW.Text);
+                        w.WriteElementString("Weapon_8", W8_PW.Text);
+                        w.WriteEndElement();
+
+                        //Snipers
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Sniper Rifles");
+                        w.WriteElementString("Weapon_1", W1_Sniper.Text);
+                        w.WriteElementString("Weapon_2", W2_Sniper.Text);
+                        w.WriteElementString("Weapon_3", W3_Sniper.Text);
+                        w.WriteElementString("Weapon_4", W4_Sniper.Text);
+                        w.WriteElementString("Weapon_5", W5_Sniper.Text);
+                        w.WriteElementString("Weapon_6", W6_Sniper.Text);
+                        w.WriteElementString("Weapon_7", W7_Sniper.Text);
+                        w.WriteElementString("Weapon_8", W8_Sniper.Text);
+                        w.WriteEndElement();
+
+                        //Grenades
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Grenades");
+                        w.WriteElementString("Weapon_1", W1_Grenade.Text);
+                        w.WriteElementString("Weapon_2", W2_Grenade.Text);
+                        w.WriteElementString("Weapon_3", W3_Grenade.Text);
+                        w.WriteElementString("Weapon_4", W4_Grenade.Text);
+                        w.WriteElementString("Weapon_5", W5_Grenade.Text);
+                        w.WriteElementString("Weapon_6", W6_Grenade.Text);
+                        w.WriteElementString("Weapon_7", W7_Grenade.Text);
+                        w.WriteElementString("Weapon_8", W8_Grenade.Text);
+                        w.WriteEndElement();
+
+                        //Remote Mines
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Remote Mines");
+                        w.WriteElementString("Weapon_1", W1_RM.Text);
+                        w.WriteElementString("Weapon_2", W2_RM.Text);
+                        w.WriteElementString("Weapon_3", W3_RM.Text);
+                        w.WriteElementString("Weapon_4", W4_RM.Text);
+                        w.WriteElementString("Weapon_5", W5_RM.Text);
+                        w.WriteElementString("Weapon_6", W6_RM.Text);
+                        w.WriteElementString("Weapon_7", W7_RM.Text);
+                        w.WriteElementString("Weapon_8", W8_RM.Text);
+                        w.WriteEndElement();
+
+                        //Grenade Launchers
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Grenade Launchers");
+                        w.WriteElementString("Weapon_1", W1_GL.Text);
+                        w.WriteElementString("Weapon_2", W2_GL.Text);
+                        w.WriteElementString("Weapon_3", W3_GL.Text);
+                        w.WriteElementString("Weapon_4", W4_GL.Text);
+                        w.WriteElementString("Weapon_5", W5_GL.Text);
+                        w.WriteElementString("Weapon_6", W6_GL.Text);
+                        w.WriteElementString("Weapon_7", W7_GL.Text);
+                        w.WriteElementString("Weapon_8", W8_GL.Text);
+                        w.WriteEndElement();
+
+                        //Timed Mines
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Timed Mines");
+                        w.WriteElementString("Weapon_1", W1_TM.Text);
+                        w.WriteElementString("Weapon_2", W2_TM.Text);
+                        w.WriteElementString("Weapon_3", W3_TM.Text);
+                        w.WriteElementString("Weapon_4", W4_TM.Text);
+                        w.WriteElementString("Weapon_5", W5_TM.Text);
+                        w.WriteElementString("Weapon_6", W6_TM.Text);
+                        w.WriteElementString("Weapon_7", W7_TM.Text);
+                        w.WriteElementString("Weapon_8", W8_TM.Text);
+                        w.WriteEndElement();
+
+                        //Proximity Mines
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Proximity Mines");
+                        w.WriteElementString("Weapon_1", W1_PM.Text);
+                        w.WriteElementString("Weapon_2", W2_PM.Text);
+                        w.WriteElementString("Weapon_3", W3_PM.Text);
+                        w.WriteElementString("Weapon_4", W4_PM.Text);
+                        w.WriteElementString("Weapon_5", W5_PM.Text);
+                        w.WriteElementString("Weapon_6", W6_PM.Text);
+                        w.WriteElementString("Weapon_7", W7_PM.Text);
+                        w.WriteElementString("Weapon_8", W8_PM.Text);
+                        w.WriteEndElement();
+
+                        //Rockets
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Rockets");
+                        w.WriteElementString("Weapon_1", W1_Rockets.Text);
+                        w.WriteElementString("Weapon_2", W2_Rockets.Text);
+                        w.WriteElementString("Weapon_3", W3_Rockets.Text);
+                        w.WriteElementString("Weapon_4", W4_Rockets.Text);
+                        w.WriteElementString("Weapon_5", W5_Rockets.Text);
+                        w.WriteElementString("Weapon_6", W6_Rockets.Text);
+                        w.WriteElementString("Weapon_7", W7_Rockets.Text);
+                        w.WriteElementString("Weapon_8", W8_Rockets.Text);
+                        w.WriteEndElement();
+
+                        //Lasers
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Lasers");
+                        w.WriteElementString("Weapon_1", W1_Lasers.Text);
+                        w.WriteElementString("Weapon_2", W2_Lasers.Text);
+                        w.WriteElementString("Weapon_3", W3_Lasers.Text);
+                        w.WriteElementString("Weapon_4", W4_Lasers.Text);
+                        w.WriteElementString("Weapon_5", W5_Lasers.Text);
+                        w.WriteElementString("Weapon_6", W6_Lasers.Text);
+                        w.WriteElementString("Weapon_7", W7_Lasers.Text);
+                        w.WriteElementString("Weapon_8", W8_Lasers.Text);
+                        w.WriteEndElement();
+
+                        //Golden Gun
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Golden Gun");
+                        w.WriteElementString("Weapon_1", W1_GG.Text);
+                        w.WriteElementString("Weapon_2", W2_GG.Text);
+                        w.WriteElementString("Weapon_3", W3_GG.Text);
+                        w.WriteElementString("Weapon_4", W4_GG.Text);
+                        w.WriteElementString("Weapon_5", W5_GG.Text);
+                        w.WriteElementString("Weapon_6", W6_GG.Text);
+                        w.WriteElementString("Weapon_7", W7_GG.Text);
+                        w.WriteElementString("Weapon_8", W8_GG.Text);
+                        w.WriteEndElement();
+
+                        //Hunting Knives
+                        //Golden Gun
+                        w.WriteStartElement("Weapon_Set");
+                        w.WriteAttributeString("Name", "Hunting Knives");
+                        w.WriteElementString("Weapon_1", W1_HK.Text);
+                        w.WriteElementString("Weapon_2", W2_HK.Text);
+                        w.WriteElementString("Weapon_3", W3_HK.Text);
+                        w.WriteElementString("Weapon_4", W4_HK.Text);
+                        w.WriteElementString("Weapon_5", W5_HK.Text);
+                        w.WriteElementString("Weapon_6", W6_HK.Text);
+                        w.WriteElementString("Weapon_7", W7_HK.Text);
+                        w.WriteElementString("Weapon_8", W8_HK.Text);
+                        w.WriteEndElement();
+
+                        w.WriteEndElement();
+                        w.WriteEndDocument();
+                        w.Flush();
+                        w.Close();
+                    }
+                }
             }
         }
 
@@ -1354,7 +1597,717 @@ namespace GoldenEye_XBLA_Editor.Controls
             {
                 General.Message(Ex.Message.ToString());
             }
+        }
+        public void Reset_All_Weapons()
+        {
+            //Slappers
+            W1_Slappers.SelectedItem = "Slapper";
+            W1_Slappers.SelectedItem = "Slapper";
+            W2_Slappers.SelectedItem = "Slapper";
+            W3_Slappers.SelectedItem = "Slapper";
+            W4_Slappers.SelectedItem = "Slapper";
+            W5_Slappers.SelectedItem = "Slapper";
+            W6_Slappers.SelectedItem = "Slapper";
+            W7_Slappers.SelectedItem = "Slapper";
+            W8_Slappers.SelectedItem = "Slapper";
 
+            //Pistols
+            W1_Pistols.SelectedItem = "DD4 Dostovei";
+            W2_Pistols.SelectedItem = "DD4 Dostovei";
+            W3_Pistols.SelectedItem = "DD4 Dostovei";
+            W4_Pistols.SelectedItem = "PP7 Silenced";
+            W5_Pistols.SelectedItem = "PP7 Silenced";
+            W6_Pistols.SelectedItem = "PP7 Silenced";
+            W7_Pistols.SelectedItem = "Cougar Magnum";
+            W8_Pistols.SelectedItem = "Cougar Magnum";
+
+            //Throwing Knives
+            W1_TK.SelectedItem = "Throwing Knife";
+            W2_TK.SelectedItem = "Throwing Knife";
+            W3_TK.SelectedItem = "Throwing Knife";
+            W4_TK.SelectedItem = "Throwing Knife";
+            W5_TK.SelectedItem = "Throwing Knife";
+            W6_TK.SelectedItem = "Throwing Knife";
+            W7_TK.SelectedItem = "Throwing Knife";
+            W8_TK.SelectedItem = "Throwing Knife";
+
+            //Automatics
+            W1_Automatics.SelectedItem = "PP7 Silenced";
+            W2_Automatics.SelectedItem = "PP7 Silenced";
+            W3_Automatics.SelectedItem = "DD4 Dostovei";
+            W4_Automatics.SelectedItem = "DD4 Dostovei";
+            W5_Automatics.SelectedItem = "Klobb";
+            W6_Automatics.SelectedItem = "Klobb";
+            W7_Automatics.SelectedItem = "D5K Deutsche";
+            W8_Automatics.SelectedItem = "D5K Deutsche";
+
+            //Power Weapons
+            W1_PW.SelectedItem = "DD4 Dostovei";
+            W2_PW.SelectedItem = "DD4 Dostovei";
+            W3_PW.SelectedItem = "Cougar Magnum";
+            W4_PW.SelectedItem = "Cougar Magnum";
+            W5_PW.SelectedItem = "RC-P90";
+            W6_PW.SelectedItem = "RC-P90";
+            W7_PW.SelectedItem = "Automatic Shotgun";
+            W8_PW.SelectedItem = "Automatic Shotgun";
+
+            //Sniper Rifles
+            W1_Sniper.SelectedItem = "DD4 Dostovei";
+            W2_Sniper.SelectedItem = "DD4 Dostovei";
+            W3_Sniper.SelectedItem = "Cougar Magnum";
+            W4_Sniper.SelectedItem = "Cougar Magnum";
+            W5_Sniper.SelectedItem = "Klobb";
+            W6_Sniper.SelectedItem = "Klobb";
+            W7_Sniper.SelectedItem = "Sniper Rifle";
+            W8_Sniper.SelectedItem = "Sniper Rifle";
+
+            //Grenades
+            W1_Grenade.SelectedItem = "DD4 Dostovei";
+            W2_Grenade.SelectedItem = "DD4 Dostovei";
+            W3_Grenade.SelectedItem = "Klobb";
+            W4_Grenade.SelectedItem = "Klobb";
+            W5_Grenade.SelectedItem = "KF7 Soviet";
+            W6_Grenade.SelectedItem = "KF7 Soviet";
+            W7_Grenade.SelectedItem = "Hand Grenade";
+            W8_Grenade.SelectedItem = "Hand Grenade";
+
+            //Remote Mines
+            W1_RM.SelectedItem = "PP7";
+            W2_RM.SelectedItem = "PP7";
+            W3_RM.SelectedItem = "ZMG";
+            W4_RM.SelectedItem = "ZMG";
+            W5_RM.SelectedItem = "AR33 Assault Rifle";
+            W6_RM.SelectedItem = "AR33 Assault Rifle";
+            W7_RM.SelectedItem = "Remote Mine";
+            W8_RM.SelectedItem = "Remote Mine";
+
+            //Grenade Launchers
+            W1_GL.SelectedItem = "DD4 Dostovei";
+            W2_GL.SelectedItem = "DD4 Dostovei";
+            W3_GL.SelectedItem = "Klobb";
+            W4_GL.SelectedItem = "Klobb";
+            W5_GL.SelectedItem = "KF7 Soviet";
+            W6_GL.SelectedItem = "KF7 Soviet";
+            W7_GL.SelectedItem = "Grenade Launcher";
+            W8_GL.SelectedItem = "Grenade Launcher";
+
+            //Timed Mines
+            W1_TM.SelectedItem = "PP7";
+            W2_TM.SelectedItem = "PP7";
+            W3_TM.SelectedItem = "ZMG";
+            W4_TM.SelectedItem = "ZMG";
+            W5_TM.SelectedItem = "AR33 Assault Rifle";
+            W6_TM.SelectedItem = "AR33 Assault Rifle";
+            W7_TM.SelectedItem = "Timed Mine";
+            W8_TM.SelectedItem = "Timed Mine";
+
+            //Proximity Mines
+            W1_PM.SelectedItem = "PP7";
+            W2_PM.SelectedItem = "PP7";
+            W3_PM.SelectedItem = "ZMG";
+            W4_PM.SelectedItem = "ZMG";
+            W5_PM.SelectedItem = "AR33 Assault Rifle";
+            W6_PM.SelectedItem = "AR33 Assault Rifle";
+            W7_PM.SelectedItem = "Proximity Mine";
+            W8_PM.SelectedItem = "Proximity Mine";
+
+            //Rockets
+            W1_Rockets.SelectedItem = "DD4 Dostovei";
+            W2_Rockets.SelectedItem = "DD4 Dostovei";
+            W3_Rockets.SelectedItem = "Klobb";
+            W4_Rockets.SelectedItem = "Klobb";
+            W5_Rockets.SelectedItem = "KF7 Soviet";
+            W6_Rockets.SelectedItem = "KF7 Soviet";
+            W7_Rockets.SelectedItem = "Rocket Launcher";
+            W8_Rockets.SelectedItem = "Rocket Launcher";
+
+            //Lasers
+            W1_Lasers.SelectedItem = "DD4 Dostovei";
+            W2_Lasers.SelectedItem = "DD4 Dostovei";
+            W3_Lasers.SelectedItem = "Klobb";
+            W4_Lasers.SelectedItem = "Klobb";
+            W5_Lasers.SelectedItem = "KF7 Soviet";
+            W6_Lasers.SelectedItem = "KF7 Soviet";
+            W7_Lasers.SelectedItem = "Moonraker";
+            W8_Lasers.SelectedItem = "Moonraker";
+
+            //Golden Gun
+            W1_GG.SelectedItem = "DD4 Dostovei";
+            W2_GG.SelectedItem = "DD4 Dostovei";
+            W3_GG.SelectedItem = "Klobb";
+            W4_GG.SelectedItem = "Klobb";
+            W5_GG.SelectedItem = "KF7 Soviet";
+            W6_GG.SelectedItem = "KF7 Soviet";
+            W7_GG.SelectedItem = "PP7 Silenced";
+            W8_GG.SelectedItem = "Golden Gun";
+
+            //Hunting Knives
+            W1_HK.SelectedItem = "Hunting Knife";
+            W2_HK.SelectedItem = "Hunting Knife";
+            W3_HK.SelectedItem = "Hand Grenade";
+            W4_HK.SelectedItem = "Hand Grenade";
+            W5_HK.SelectedItem = "Hunting Knife";
+            W6_HK.SelectedItem = "Hunting Knife";
+            W7_HK.SelectedItem = "Sniper Rifle";
+            W8_HK.SelectedItem = "Sniper Rifle";
+        }
+        public void Edit_Xex()
+        {
+            //Cleanup
+            General.Cleanup();
+
+            if (String.IsNullOrEmpty(XexFileName.Text))
+            {
+                General.Message("Please Select Xex File");
+
+            }
+            else if (String.IsNullOrEmpty(TextID_Slappers.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Slappers Only!");
+            }
+            else if (String.IsNullOrEmpty(TextID_Pistols.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Pistols!");
+            }
+            else if (String.IsNullOrEmpty(TextID_TK.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Throwing Knives!");
+            }
+            else if (String.IsNullOrEmpty(TextID_Automatics.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Automatics!");
+            }
+            else if (String.IsNullOrEmpty(TextID_PW.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Power Weapons!");
+            }
+            else if (String.IsNullOrEmpty(TextID_Snipers.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Snipers!");
+            }
+            else if (String.IsNullOrEmpty(TextID_Grenades.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Grenades!");
+            }
+            else if (String.IsNullOrEmpty(TextID_RM.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Remote Mines!");
+            }
+            else if (String.IsNullOrEmpty(TextID_GL.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Grenade Launchers!");
+            }
+            else if (String.IsNullOrEmpty(TextID_TM.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Timed Mines!");
+            }
+            else if (String.IsNullOrEmpty(TextID_PM.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Proximity Mines!");
+            }
+            else if (String.IsNullOrEmpty(TextID_Rockets.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Rockets!");
+            }
+            else if (String.IsNullOrEmpty(TextID_Lasers.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Lasers!");
+            }
+            else if (String.IsNullOrEmpty(TextID_GG.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Golden Gun!");
+            }
+            else if (String.IsNullOrEmpty(TextID_HK.Text))
+            {
+                General.Message("Please Enter Weapon Set Text ID for Hunting Knives!");
+            }
+            else if (String.IsNullOrEmpty(Unique_Name.Text))
+            {
+                General.Message("Please Enter Unique Name");
+            }
+            else
+            {
+                //Write Weapons
+                Write_Weapons();
+
+                //Write Unique ID
+                Write_Unique_ID();
+
+                //Get Xextool
+                Get_Xex_Tool();
+
+                //Sign Xex File
+                Sign_Xex();
+
+                General.Cleanup();
+                General.Message("Weapon Sets Updated Successfully!");
+            }
+        }
+        public void Sign_Xex()
+        {
+            string Xextool = @"C:\RetroDriven_Temp\xextool.exe";
+            string XexTool = $"/C {Xextool} -md \"{XexFileName.Text}\"";
+            System.Diagnostics.Process SignXex = new System.Diagnostics.Process();
+            SignXex.StartInfo.FileName = "cmd.exe";
+            SignXex.StartInfo.Arguments = XexTool;
+            SignXex.Start();
+            SignXex.WaitForExit();
+        }
+        public void Get_Xex_Tool()
+        {
+            Directory.CreateDirectory(@"C:\RetroDriven_Temp");
+            string Xextool = @"C:\RetroDriven_Temp\xextool.exe";
+            object ob2 = Resource1.ResourceManager.GetObject("xextool", resourceCulture);
+            byte[] myResBytes2 = (byte[])ob2;
+            using (FileStream fsDst2 = new FileStream(Xextool, FileMode.CreateNew))
+            {
+                byte[] bytes2 = myResBytes2;
+                fsDst2.Write(bytes2, 0, bytes2.Length);
+                fsDst2.Close();
+                fsDst2.Dispose();
+            }
+        }
+        public void Write_Unique_ID()
+        {
+            using (BinaryWriter writer = new BinaryWriter(File.Open(XexFileName.Text, FileMode.Open, FileAccess.ReadWrite)))
+            {
+                int offset2 = 7452; //position you want to start editing
+                string trimmed = String.Concat(Unique_Name.Text.Where(c => !Char.IsWhiteSpace(c)));
+                byte[] new_data = Encoding.ASCII.GetBytes(trimmed);
+                byte[] new_data2 = new byte[] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }; //new data
+                writer.Seek(offset2, SeekOrigin.Begin); //move your cursor to the position
+                writer.Write(new_data2);
+                writer.Seek(offset2, SeekOrigin.Begin);
+                writer.Write(new_data);//write it
+            }
+        }
+        public void Write_Weapons()
+        {
+
+            //Slappers
+            Write_TextID(XexFileName.Text, 0x417AF4, TextID_Slappers.Text);
+            Write_W(XexFileName.Text, "1", 0x417728, W1_Slappers.Text);
+            Write_W(XexFileName.Text, "2", 0x417730, W2_Slappers.Text);
+            Write_W(XexFileName.Text, "3", 0x417738, W3_Slappers.Text);
+            Write_W(XexFileName.Text, "4", 0x417740, W4_Slappers.Text);
+            Write_W(XexFileName.Text, "5", 0x417748, W5_Slappers.Text);
+            Write_W(XexFileName.Text, "6", 0x417750, W6_Slappers.Text);
+            Write_W(XexFileName.Text, "7", 0x417758, W7_Slappers.Text);
+            Write_W(XexFileName.Text, "8", 0x417760, W8_Slappers.Text);
+
+            //Pistols
+            Write_TextID(XexFileName.Text, 0x417B00, TextID_Pistols.Text);
+            Write_W(XexFileName.Text, "1", 0x417768, W1_Pistols.Text);
+            Write_W(XexFileName.Text, "2", 0x417770, W2_Pistols.Text);
+            Write_W(XexFileName.Text, "3", 0x417778, W3_Pistols.Text);
+            Write_W(XexFileName.Text, "4", 0x417780, W4_Pistols.Text);
+            Write_W(XexFileName.Text, "5", 0x417788, W5_Pistols.Text);
+            Write_W(XexFileName.Text, "6", 0x417790, W6_Pistols.Text);
+            Write_W(XexFileName.Text, "7", 0x417798, W7_Pistols.Text);
+            Write_W(XexFileName.Text, "8", 0x4177A0, W8_Pistols.Text);
+
+            //Throwing Knives
+            Write_TextID(XexFileName.Text, 0x417B0C, TextID_TK.Text);
+            Write_W(XexFileName.Text, "1", 0x4177A8, W1_TK.Text);
+            Write_W(XexFileName.Text, "2", 0x4177B0, W2_TK.Text);
+            Write_W(XexFileName.Text, "3", 0x4177B8, W3_TK.Text);
+            Write_W(XexFileName.Text, "4", 0x4177C0, W4_TK.Text);
+            Write_W(XexFileName.Text, "5", 0x4177C8, W5_TK.Text);
+            Write_W(XexFileName.Text, "6", 0x4177D0, W6_TK.Text);
+            Write_W(XexFileName.Text, "7", 0x4177D8, W7_TK.Text);
+            Write_W(XexFileName.Text, "8", 0x4177E0, W8_TK.Text);
+
+            //Automatics
+            Write_TextID(XexFileName.Text, 0x417B18, TextID_Automatics.Text);
+            Write_W(XexFileName.Text, "1", 0x4177E8, W1_Automatics.Text);
+            Write_W(XexFileName.Text, "2", 0x4177F0, W2_Automatics.Text);
+            Write_W(XexFileName.Text, "3", 0x4177F8, W3_Automatics.Text);
+            Write_W(XexFileName.Text, "4", 0x417800, W4_Automatics.Text);
+            Write_W(XexFileName.Text, "5", 0x417808, W5_Automatics.Text);
+            Write_W(XexFileName.Text, "6", 0x417810, W6_Automatics.Text);
+            Write_W(XexFileName.Text, "7", 0x417818, W7_Automatics.Text);
+            Write_W(XexFileName.Text, "8", 0x417820, W8_Automatics.Text);
+
+            //Power Weapons
+            Write_TextID(XexFileName.Text, 0x417B24, TextID_PW.Text);
+            Write_W(XexFileName.Text, "1", 0x417828, W1_PW.Text);
+            Write_W(XexFileName.Text, "2", 0x417830, W2_PW.Text);
+            Write_W(XexFileName.Text, "3", 0x417838, W3_PW.Text);
+            Write_W(XexFileName.Text, "4", 0x417840, W4_PW.Text);
+            Write_W(XexFileName.Text, "5", 0x417848, W5_PW.Text);
+            Write_W(XexFileName.Text, "6", 0x417850, W6_PW.Text);
+            Write_W(XexFileName.Text, "7", 0x417858, W7_PW.Text);
+            Write_W(XexFileName.Text, "8", 0x417860, W8_PW.Text);
+
+            //Snipers
+            Write_TextID(XexFileName.Text, 0x417B30, TextID_Snipers.Text);
+            Write_W(XexFileName.Text, "1", 0x417868, W1_Sniper.Text);
+            Write_W(XexFileName.Text, "2", 0x417870, W2_Sniper.Text);
+            Write_W(XexFileName.Text, "3", 0x417878, W3_Sniper.Text);
+            Write_W(XexFileName.Text, "4", 0x417880, W4_Sniper.Text);
+            Write_W(XexFileName.Text, "5", 0x417888, W5_Sniper.Text);
+            Write_W(XexFileName.Text, "6", 0x417890, W6_Sniper.Text);
+            Write_W(XexFileName.Text, "7", 0x417898, W7_Sniper.Text);
+            Write_W(XexFileName.Text, "8", 0x4178A0, W8_Sniper.Text);
+
+            //Grenades
+            Write_TextID(XexFileName.Text, 0x417B3C, TextID_Grenades.Text);
+            Write_W(XexFileName.Text, "1", 0x4178A8, W1_Grenade.Text);
+            Write_W(XexFileName.Text, "2", 0x4178B0, W2_Grenade.Text);
+            Write_W(XexFileName.Text, "3", 0x4178B8, W3_Grenade.Text);
+            Write_W(XexFileName.Text, "4", 0x4178C0, W4_Grenade.Text);
+            Write_W(XexFileName.Text, "5", 0x4178C8, W5_Grenade.Text);
+            Write_W(XexFileName.Text, "6", 0x4178D0, W6_Grenade.Text);
+            Write_W(XexFileName.Text, "7", 0x4178D8, W7_Grenade.Text);
+            Write_W(XexFileName.Text, "8", 0x4178E0, W8_Grenade.Text);
+
+            //Write Grenade Launchers
+            Write_TextID(XexFileName.Text, 0x417B54, TextID_GL.Text);
+            Write_W(XexFileName.Text, "1", 0x417928, W1_GL.Text);
+            Write_W(XexFileName.Text, "2", 0x417930, W2_GL.Text);
+            Write_W(XexFileName.Text, "3", 0x417938, W3_GL.Text);
+            Write_W(XexFileName.Text, "4", 0x417940, W4_GL.Text);
+            Write_W(XexFileName.Text, "5", 0x417948, W5_GL.Text);
+            Write_W(XexFileName.Text, "6", 0x417950, W6_GL.Text);
+            Write_W(XexFileName.Text, "7", 0x417958, W7_GL.Text);
+            Write_W(XexFileName.Text, "8", 0x417960, W8_GL.Text);
+
+            //Write Timed Mines
+            Write_TextID(XexFileName.Text, 0x417B60, TextID_TM.Text);
+            Write_W(XexFileName.Text, "1", 0x417968, W1_TM.Text);
+            Write_W(XexFileName.Text, "2", 0x417970, W2_TM.Text);
+            Write_W(XexFileName.Text, "3", 0x417978, W3_TM.Text);
+            Write_W(XexFileName.Text, "4", 0x417980, W4_TM.Text);
+            Write_W(XexFileName.Text, "5", 0x417988, W5_TM.Text);
+            Write_W(XexFileName.Text, "6", 0x417990, W6_TM.Text);
+            Write_W(XexFileName.Text, "7", 0x417998, W7_TM.Text);
+            Write_W(XexFileName.Text, "8", 0x4179A0, W8_TM.Text);
+
+            //Write Proximity Mines
+            Write_TextID(XexFileName.Text, 0x417B6C, TextID_PM.Text);
+            Write_W(XexFileName.Text, "1", 0x4179A8, W1_PM.Text);
+            Write_W(XexFileName.Text, "2", 0x4179B0, W2_PM.Text);
+            Write_W(XexFileName.Text, "3", 0x4179B8, W3_PM.Text);
+            Write_W(XexFileName.Text, "4", 0x4179C0, W4_PM.Text);
+            Write_W(XexFileName.Text, "5", 0x4179C8, W5_PM.Text);
+            Write_W(XexFileName.Text, "6", 0x4179D0, W6_PM.Text);
+            Write_W(XexFileName.Text, "7", 0x4179D8, W7_PM.Text);
+            Write_W(XexFileName.Text, "8", 0x4179E0, W8_PM.Text);
+
+            //Write Rockets
+            Write_TextID(XexFileName.Text, 0x417B78, TextID_Rockets.Text);
+            Write_W(XexFileName.Text, "1", 0x4179E8, W1_Rockets.Text);
+            Write_W(XexFileName.Text, "2", 0x4179F0, W2_Rockets.Text);
+            Write_W(XexFileName.Text, "3", 0x4179F8, W3_Rockets.Text);
+            Write_W(XexFileName.Text, "4", 0x417A00, W4_Rockets.Text);
+            Write_W(XexFileName.Text, "5", 0x417A08, W5_Rockets.Text);
+            Write_W(XexFileName.Text, "6", 0x417A10, W6_Rockets.Text);
+            Write_W(XexFileName.Text, "7", 0x417A18, W7_Rockets.Text);
+            Write_W(XexFileName.Text, "8", 0x417A20, W8_Rockets.Text);
+
+            //Write Lasers
+            Write_TextID(XexFileName.Text, 0x417B84, TextID_Lasers.Text);
+            Write_W(XexFileName.Text, "1", 0x417A28, W1_Lasers.Text);
+            Write_W(XexFileName.Text, "2", 0x417A30, W2_Lasers.Text);
+            Write_W(XexFileName.Text, "3", 0x417A38, W3_Lasers.Text);
+            Write_W(XexFileName.Text, "4", 0x417A40, W4_Lasers.Text);
+            Write_W(XexFileName.Text, "5", 0x417A48, W5_Lasers.Text);
+            Write_W(XexFileName.Text, "6", 0x417A50, W6_Lasers.Text);
+            Write_W(XexFileName.Text, "7", 0x417A58, W7_Lasers.Text);
+            Write_W(XexFileName.Text, "8", 0x417A60, W8_Lasers.Text);
+
+            //Write Golden Gun
+            Write_TextID(XexFileName.Text, 0x417B90, TextID_GG.Text);
+            Write_W(XexFileName.Text, "1", 0x417A68, W1_GG.Text);
+            Write_W(XexFileName.Text, "2", 0x417A70, W2_GG.Text);
+            Write_W(XexFileName.Text, "3", 0x417A78, W3_GG.Text);
+            Write_W(XexFileName.Text, "4", 0x417A80, W4_GG.Text);
+            Write_W(XexFileName.Text, "5", 0x417A88, W5_GG.Text);
+            Write_W(XexFileName.Text, "6", 0x417A90, W6_GG.Text);
+            Write_W(XexFileName.Text, "7", 0x417A98, W7_GG.Text);
+            Write_W(XexFileName.Text, "8", 0x417AA0, W8_GG.Text);
+
+            //Write Hunting Knives
+            Write_TextID(XexFileName.Text, 0x417B9C, TextID_HK.Text);
+            Write_W(XexFileName.Text, "1", 0x417AA8, W1_HK.Text);
+            Write_W(XexFileName.Text, "2", 0x417AB0, W2_HK.Text);
+            Write_W(XexFileName.Text, "3", 0x417AB8, W3_HK.Text);
+            Write_W(XexFileName.Text, "4", 0x417AC0, W4_HK.Text);
+            Write_W(XexFileName.Text, "5", 0x417AC8, W5_HK.Text);
+            Write_W(XexFileName.Text, "6", 0x417AD0, W6_HK.Text);
+            Write_W(XexFileName.Text, "7", 0x417AD8, W7_HK.Text);
+            Write_W(XexFileName.Text, "8", 0x417AE0, W8_HK.Text);
+
+        }
+        public static void Write_TextID(string Xex, int Text_ID_Offset, string Text_ID_Value)
+        {
+            using (BinaryWriter writer = new BinaryWriter(File.Open(Xex, FileMode.Open, FileAccess.ReadWrite)))
+            {
+                byte[] data = new byte[Text_ID_Value.Length / 2];
+                for (int i = 0; i < Text_ID_Value.Length; i += 2)
+                    data[i / 2] = Convert.ToByte(Text_ID_Value.Substring(i, 2), 16);
+                writer.Seek(Text_ID_Offset, SeekOrigin.Begin);
+                writer.Write(data);
+            }
+        }
+        public void Write_W(string Xex, string WeaponSlot, int WeaponOffset, string WeaponText)
+        {
+            using (BinaryWriter writer = new BinaryWriter(File.Open(Xex, FileMode.Open, FileAccess.ReadWrite)))
+            {
+                if (WeaponText == "Slapper")
+                {
+                    string WeaponValue = "0001000100CD0100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Hunting Knife")
+                {
+                    string WeaponValue = "0200000100BA0100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Throwing Knife")
+                {
+                    string WeaponValue = "030A0A0000D10100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "PP7")
+                {
+                    string WeaponValue = "0401320100BF0300";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "PP7 Silenced")
+                {
+                    string WeaponValue = "0501320100CC0100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "DD4 Dostovei")
+                {
+                    string WeaponValue = "0601320100CD0100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Klobb")
+                {
+                    string WeaponValue = "0701640100C10180";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "KF7 Soviet")
+                {
+                    string WeaponValue = "0803640100B80180";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "ZMG")
+                {
+                    string WeaponValue = "0901640100C30180";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "D5K Deutsche")
+                {
+                    string WeaponValue = "0A01640100BD0100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "D5K Silenced")
+                {
+                    string WeaponValue = "0B01640100CE0100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Phantom")
+                {
+                    string WeaponValue = "0C01640100C20100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "AR33 Assault Rifle")
+                {
+                    string WeaponValue = "0D03640100BC0180";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "RC-P90")
+                {
+                    string WeaponValue = "0E01640100C50100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Shotgun")
+                {
+                    string WeaponValue = "0F041E0100C00100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Automatic Shotgun")
+                {
+                    string WeaponValue = "10041E0100CF0100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Sniper Rifle")
+                {
+                    string WeaponValue = "1103320100D20100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Cougar Magnum")
+                {
+                    string WeaponValue = "120C320100BE0100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Golden Gun")
+                {
+                    string WeaponValue = "130D0A0100D00180";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Silver PP7")
+                {
+                    string WeaponValue = "1401320100E60100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Gold PP7")
+                {
+                    string WeaponValue = "15010A0100E70180";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Moonraker")
+                {
+                    string WeaponValue = "1600000100BB0180";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Grenade Launcher")
+                {
+                    string WeaponValue = "180B060100B90100";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Rocket Launcher")
+                {
+                    string WeaponValue = "1906060100D30180";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Hand Grenade")
+                {
+                    string WeaponValue = "1A05050000C40180";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Timed Mine")
+                {
+                    string WeaponValue = "1B09050000C90180";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Proximity Mine")
+                {
+                    string WeaponValue = "1C08050000C80180";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+                else if (WeaponText == "Remote Mine")
+                {
+                    string WeaponValue = "1D07050000C70180";
+                    byte[] data = new byte[WeaponValue.Length / 2];
+                    for (int i = 0; i < WeaponValue.Length; i += 2)
+                        data[i / 2] = Convert.ToByte(WeaponValue.Substring(i, 2), 16);
+                    writer.Seek(WeaponOffset, SeekOrigin.Begin);
+                    writer.Write(data);
+                }
+
+            }
         }
         private void Reset_Slappers_Click(object sender, EventArgs e)
         {
@@ -1532,6 +2485,44 @@ namespace GoldenEye_XBLA_Editor.Controls
             catch (Exception ex)
             {
                 General.Message(ex.Message.ToString());
+            }
+        }
+
+        private void Export_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Export_Weapons();
+                General.Message("Weapon Sets Exported Successfully!");
+            }
+            catch (Exception Ex)
+            {
+                General.Message(Ex.Message.ToString());
+            }
+
+        }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Reset_All_Weapons();
+            }
+            catch (Exception Ex)
+            {
+                General.Message(Ex.Message.ToString());
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Edit_Xex();
+            }
+            catch (Exception Ex)
+            {
+                General.Message(Ex.Message.ToString());
             }
         }
     }
